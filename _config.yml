@@ -1,5 +1,6 @@
-title:            »¬Ç½Slidingwall
-description:      ÎŞÈ¤µÄ´óÑ§ÏÌÓãÉú»î.
+
+title:            æ»‘å¢™Slidingwall
+description:      æ— è¶£çš„å¤§å­¦å’¸é±¼ç”Ÿæ´».
 logo:             omikron.png
 disqus_shortname: shortname
 # Assign a default image for your site's header and footer
@@ -42,11 +43,11 @@ jekyll-archives:
 
 # Owner/author information
 author:
-  name:           »¬Ç½
+  name:           æ»‘å¢™
   picture:        your-photo.jpg
   email:          slidingwall@outlook.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    ÔÚ¶Á´óÑ§Éú£¬ÎŞÈ¤µÄÏÌÓã£¬ÖªÃû¹¤¾ßÈË
+  description:    åœ¨è¯»å¤§å­¦ç”Ÿï¼Œæ— è¶£çš„å’¸é±¼ï¼ŒçŸ¥åå·¥å…·äºº
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
@@ -64,13 +65,13 @@ google_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Ö÷Ò³
+  - title: ä¸»é¡µ
     url: /
     external: false
     icon: home
-  - title: ·ÖÀà
+  - title: åˆ†ç±»
     url: /categories
-  - title: ±êÇ©
+  - title: æ ‡ç­¾
     url: /tags
 
 # Sitemap configuration
