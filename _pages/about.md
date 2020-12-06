@@ -1,8 +1,9 @@
 ---
 layout: page
 permalink: /about/
-title: About Me
+title: 关于
 tags: [tags]
 ---
 
-# Your about page
+# 关于
+当代咸鱼大学生。  
