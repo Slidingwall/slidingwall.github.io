@@ -73,6 +73,8 @@ links:
     url: /categories
   - title: 标签
     url: /tags
+  - title: 关于
+    url: /about
 
 # Sitemap configuration
 # https://github.com/kinnetica/jekyll-plugins
