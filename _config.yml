@@ -51,10 +51,11 @@ author:
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
-  github:
+  github: https://github.com/Slidingwall
   linkedin:
   instagram:
   tumblr:
+  bilibili: https://space.bilibili.com/141232009
   # For Google Authorship https://plus.google.com/authorship
   #google_plus:    "http://plus.google.com/123123123123132123"
 
@@ -75,6 +76,7 @@ links:
     url: /tags
   - title: 关于
     url: /about
+    external: true
 
 # Sitemap configuration
 # https://github.com/kinnetica/jekyll-plugins
