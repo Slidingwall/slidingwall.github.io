@@ -45,9 +45,7 @@ Markdown: Syntax
 
 
 **Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL][src].
-
-  [src]: /projects/markdown/syntax.text
+can see the source [here](https://raw.githubusercontent.com/Slidingwall/slidingwall.github.io/main/_posts/2015-8-23-MarkdownTest.md).
 
 * * *
 
