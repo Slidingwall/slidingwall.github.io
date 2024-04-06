@@ -23,9 +23,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-  title: "滑墙 | Slidingwall"
-  email: "slidingwall@outlook.com"
-  author: "Slidingwall"
+
+title: "滑墙 | Slidingwall"
+email: "slidingwall@outlook.com"
+author: "Slidingwall"
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -39,19 +40,19 @@
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-  copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
 
-  description:   "无趣的咸鱼生活." # this means to ignore newlines until "baseurl:"
+description:   "无趣的咸鱼生活." # this means to ignore newlines until "baseurl:"
 
 
-  baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://slidingwall.github.io" # the base hostname & protocol for your site, e.g. https://example.com
-  favicon: "" # the favicon for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://slidingwall.github.io" # the base hostname & protocol for your site, e.g. https://example.com
+favicon: "" # the favicon for your site
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-  yat:
-    date_format: "%b %d, %Y"
+yat:
+  date_format: "%b %d, %Y"
 
 # If you want more debug log, you can set true
 # debug: false
@@ -70,7 +71,7 @@
 # sitemap: false
 
 # If you want to change site language, you can set lang option
-  lang: "zh-CN"  # default lang is en
+lang: "zh-CN"  # default lang is en
 
 # Translate languges
 # langs refer to https://cloud.google.com/translate/docs/languages
@@ -158,9 +159,9 @@
 
 # Page default value
 # defaults:
-   home:
-      heading: '滑墙 | Slidingwall'
-      subheading: '记录无聊的咸鱼生活.'
+home:
+  heading: '滑墙 | Slidingwall'
+  subheading: '记录无聊的咸鱼生活.'
 #     banner: "Your image url"
 
 # Banner default settings
@@ -236,9 +237,9 @@
 
 # Build settings
 # highlighter: none
-  markdown: kramdown
-  kramdown:
-    input: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
 
 plugins:
   - jekyll-feed
