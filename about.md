@@ -1,16 +1,18 @@
 ---
 layout: about
-title: About
+title: 关于
 ---
 
-<h2>关于</h2>
+## 关于
 
-<p>
-:art:&nbsp;才疏学浅的咸鱼。
-</p>
 
-<p>
+才疏学浅的咸鱼。
+
+
+
 歌声合成相关、业余美工、不会打游戏。
+
 [Bilibili](https://space.bilibili.com/141232009)
+
 [Github](https://github.com/Slidingwall)
-</p>
+

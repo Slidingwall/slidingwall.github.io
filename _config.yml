@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 滑墙 | Slidingwall
+title: 滑墙   Slidingwall
 email: slidingwall@outlook.com
 author: Slidingwall
 
@@ -71,7 +71,7 @@ yat:
 # sitemap: false
 
 # If you want to change site language, you can set lang option
-# lang: "en"  # default lang is en
+lang: "zh-CN"  # default lang is en
 
 # Translate languges
 # langs refer to https://cloud.google.com/translate/docs/languages
@@ -159,9 +159,9 @@ yat:
 
 # Page default value
 # defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
+   home:
+      heading: '滑墙 | Slidingwall'
+      subheading: '记录无聊的咸鱼生活.'
 #     banner: "Your image url"
 
 # Banner default settings
