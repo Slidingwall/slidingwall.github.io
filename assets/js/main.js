@@ -1,36 +1,58 @@
-/*! Plugin options and other jQuery stuff */
+// Fix DOM matches function
+if (!Element.prototype.matches) {
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function(s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
+}
 
-// FitVids options
-$(function () {
-  $("article").fitVids();
-});
+// Get Scroll position
+function getScrollPos() {
+  var supportPageOffset = window.pageXOffset !== undefined;
+  var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
-// Table of Contents toggle
-$(function () {
-  $(".toc h3").click(function () {
-    $("#drawer").toggleClass("hidden");
-  });
-});
+  var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
+  var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
-// Add lightbox class to all image links
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
+  return { x: x, y: y };
+}
 
-// Magnific-Popup options
-$(document).ready(function () {
-  $('.image-popup').magnificPopup({
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
-    },
-    removalDelay: 300, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open. 
-    // make it unique to apply your CSS animations just to this exact popup
-    mainClass: 'mfp-fade'
-  });
-});
+var _scrollTimer = [];
+
+// Smooth scroll
+function smoothScrollTo(y, time) {
+  time = time == undefined ? 500 : time;
+
+  var scrollPos = getScrollPos();
+  var count = 60;
+  var length = (y - scrollPos.y);
+
+  function easeInOut(k) {
+    return .5 * (Math.sin((k - .5) * Math.PI) + 1);
+  }
+
+  for (var i = _scrollTimer.length - 1; i >= 0; i--) {
+    clearTimeout(_scrollTimer[i]);
+  }
+
+  for (var i = 0; i <= count; i++) {
+    (function() {
+      var cur = i;
+      _scrollTimer[cur] = setTimeout(function() {
+        window.scrollTo(
+          scrollPos.x,
+          scrollPos.y + length * easeInOut(cur/count)
+        );
+      }, (time / count) * cur);
+    })();
+  }
+}
+
