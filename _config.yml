@@ -72,7 +72,7 @@ yat:
 
 # If you want to change site language, you can set lang option
 lang: "zh-CN"  # default lang is en
-
+timezone: Asia/Shanghai
 # Translate languges
 # langs refer to https://cloud.google.com/translate/docs/languages
 # translate_langs:
@@ -160,8 +160,8 @@ lang: "zh-CN"  # default lang is en
 # Page default value
 # defaults:
 home:
-  heading: '滑墙 | Slidingwall'
-  subheading: '记录无聊的咸鱼生活.'
+  heading: "滑墙 | Slidingwall"
+  subheading: "记录无聊的咸鱼生活."
 #     banner: "Your image url"
 
 # Banner default settings
