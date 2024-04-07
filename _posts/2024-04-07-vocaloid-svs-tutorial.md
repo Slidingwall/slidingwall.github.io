@@ -100,6 +100,7 @@ DBTool可以读取`.mp3` `.wav` `.ogg`格式的音频，只要转录(trans)文�
     - **N\\** = h / C / p\ / p\' / w / v / v' / j
     - **J** = J
     - **n** = 其他情况
+
 3. 正如笔者之前提到的，有些辅音需要`Stationary`。所有语言的鼻音和流音都是如此。**如果没有`C C`衔接的话，两个辅音之间的过渡会不顺畅。**  
 *译注：由于Vocaloid将所有中文前后鼻音归纳为复韵母，因此中文是唯一一个没有`C C`衔接，也没有辅音持续的语言。*
 4. 不要在音阶上过于苛刻，这可能会损坏Vocaloid。**对日语音阶建议在3~5个左右，而英语则是3个。** XSY完全可用，因此不用担心！**不同语言或不同格式的声库无法交叉合成，日文CVVC声库与XSY不兼容。**
@@ -270,9 +271,9 @@ DBTool可以读取`.mp3` `.wav` `.ogg`格式的音频，只要转录(trans)文�
 环境配置：
 - Python 3.10.0
 - Pyyaml (在终端内运行`pip install pyyaml`)
-- 在**工具与软件**中下载并解压`DDB_Packer.zip`
+- 在**资源**中下载并解压`DDB_Packer.zip`
 
-您还需要[在这里](https://vvd.uselessbug.tk/)生成VVD、安装和卸载脚本。  
+您还需要[在这里](/VVD/)生成VVD、安装和卸载脚本。  
 点击`?`查看并为您的声库选择一个CompID。  
 
 ![](/assets/images/vocaloid-svs-tutorial/29.gif)
@@ -376,7 +377,7 @@ python mixins_ddb.py - -src_path “您声库.ddi文件的路径” - -mixins_pa
 - [ViVi + VocaDev](https://archive.org/details/vivi-jpn-final)（不需要保留Vivi）
 - [Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个允许不安装注册声库的软件，但声库只会显示在Vocaloid 4 FE Plus编辑器中）
 - [Canned Bread's Swiss Army Knife](https://github.com/bread-in-a-can/Canned-Bread-s-VOCALOIDDBTOOL-Swiss-Army-Knife)（创建空白的`.trans`文件，以及将`.oto`文件转换为`.seq`文件）
-- [VVD Editor Plus](https://vvd.uselessbug.tk/)（生成VVD文件、安装和卸载脚本。将声库打包在其他编辑器中使用时非常有用）
+- [VVD Editor Plus](/VVD/)（生成VVD文件、安装和卸载脚本。将声库打包在其他编辑器中使用时非常有用）*译注：文内链接均为译者fork版本，更新部分V4英语CompID。*
 - [DDB Tools](https://github.com/yuukawahiroshi/ddb-tools)（将声库打包成V3、V4、V5和V6都可以使用的格式。您需要自己准备含有咆哮声ddb和ddi文件，您可以使用VY1或Flower的）
 - [Colab版](https://colab.research.google.com/drive/1AMVBC5ex2QWffivwJm1qeavjBGpsnUQq?usp=sharing)（已更新为使用Github存储库）
 - [GUMI英语录音表(非基础)](https://docs.google.com/spreadsheets/d/15eBYYlkggMVbqEL1AvLlmLTVvVrNpaqJs9TIl16Y9mE/edit?usp=sharing)
