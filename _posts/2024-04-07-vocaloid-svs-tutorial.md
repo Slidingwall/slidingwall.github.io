@@ -6,6 +6,7 @@ category: 歌声合成
 author: Zelliel & EnlilGen
 tags: [Vocaloid, 歌声合成, 翻译]
 summary: 
+excerpt_image:/assets/images/vocaloid-svs-tutorial/18.png
 ---
 
 > 译注：本文为该文档中文精翻，仅供学习参考使用，内容及立场不代表译者观点。  
