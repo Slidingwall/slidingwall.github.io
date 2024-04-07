@@ -4,7 +4,7 @@ title: 【中译】Vocaloid声库制作教程
 date: 2024-04-07 04:05
 category: 歌声合成
 author: Zelliel & EnlilGen
-tags: [Vocaloid 歌声合成 翻译]
+tags: [Vocaloid, 歌声合成, 翻译]
 summary: 
 ---
 
