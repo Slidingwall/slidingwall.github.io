@@ -18,7 +18,7 @@ summary:
 如果您的硬盘没有至少1\~20GB的空间，**不要尝试！**（即使是一个音阶的采样，也高达1\~5GB）  
 **这将需要大量的时间、大量的精力、大量的空间。**
 
-# Vocaloid声库制作教程
+## Vocaloid声库制作教程
 
 作者：[Zelliel](https://twitter.com/Zelliell) 与 [EnlilGen](https://twitter.com/EnlilGen)  
 
