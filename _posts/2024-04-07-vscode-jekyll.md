@@ -22,10 +22,10 @@ summary:
  ## 步骤
 
  1. 首先，在扩展里搜索`jekyll-post`并安装。  
-![](/assets/vscode-jekyll-1.png)
+![](/assets/images/vscode-jekyll-1.png)
  2. 安装完成后，在VScode的资源管理器中打开博客的Github仓库。在`_posts`文件夹内右键，选择`New Post`。  
-![](/assets/vscode-jekyll-2.png)
+![](/assets/images/vscode-jekyll-2.png)
  3. 在弹出来的对话框中输入文件的标题名称，插件会自动读取当前的系统时间来创建自动命名好的文件。  
-![](/assets/vscode-jekyll-3.png)
+![](/assets/images/vscode-jekyll-3.png)
  4. 同时，头信息也自动包含在了新建的文件中。可以通过在博客根目录建立`.post-template`以自定义头信息模板。  
-![](/assets/vscode-jekyll-4.png)
+![](/assets/images/vscode-jekyll-4.png)
