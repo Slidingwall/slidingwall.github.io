@@ -6,6 +6,7 @@ category: 技巧
 author: 滑墙
 tags: [Jekyll, VScode, 插件]
 summary: 
+excerpt_image: /assets/images/vscode-jekyll-1.png
 ---
 
 ## 前言
