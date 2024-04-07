@@ -160,8 +160,8 @@ timezone: Asia/Shanghai
 # Page default value
 # defaults:
 home:
-  heading: "滑墙 | Slidingwall"
-  subheading: "记录无聊的咸鱼生活."
+  heading: 滑墙 | Slidingwall
+  subheading: 记录无聊的咸鱼生活.
 #     banner: "Your image url"
 
 # Banner default settings
