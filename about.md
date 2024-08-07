@@ -1,6 +1,7 @@
 ---
 layout: about
 title: 关于
+nav_order: 5
 ---
 
 ## 关于

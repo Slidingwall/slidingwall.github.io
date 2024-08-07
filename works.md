@@ -1,9 +1,11 @@
 ---
 layout: about
 title: 作品
+nav_order: 6
 ---
 
-## 歌声合成相关
+### 歌声合成相关
+
 #### [Link of my project files](https://www.alipan.com/s/BW1aSuvRXJR)
 
 Bilibili已投稿作品的各种工程文件。
