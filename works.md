@@ -12,11 +12,11 @@ Bilibili已投稿作品的各种工程文件。
 
 #### [synthv-dictionaries](/synthv-dictionaries)
 
-用于Synthesizer V的用户字典，以使语音库蹩脚的唱出另一种语言。*似乎有重大错误等待修正
+用于Synthesizer V的用户字典，以使语音库蹩脚的唱出另一种语言。附赠字典转换器。
 
 #### [vocaloid-dictionaries](/vocaloid-dictionaries)
 
-用于vocaloid的工作插件，以使语音库蹩脚的唱出另一种语言。*效果仍不理想 等待修正中
+用于vocaloid的工作插件，以使语音库蹩脚的唱出另一种语言。基于通用插件并新增拆音功能，附赠字典转换器。
 
 同时寄存[Vocaloid Sample Parts](/vocaloid-dictionaries/Vocaloid-Sample-Parts)与[发音记号表](/vocaloid-dictionaries/symbol-charts)
 
