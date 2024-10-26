@@ -76,12 +76,12 @@ plt.title("DYN Curve")
 其幅度曲线具有明显的指数特性。响度曲线中，除较低参数之外则为明显的线性关系。  
 通过分段函数拟合后可得，DYN分段点约在36左右。DYN36以下，幅度呈线性关系，响度呈对数关系；DYN36以上，幅度呈指数关系，响度呈线性关系。  
 笔误：DYN-per的Y轴单位误打为dB。应为百分比%
-![dyn db](/assets/images/bri-dyn/dyn-db.png)
-![dyn per](/assets/images/bri-dyn/dyn-per.png)
+![dyn db](/assets/images/bri-dyn/dyn-db.webp)
+![dyn per](/assets/images/bri-dyn/dyn-per.webp)
 
 #### BRI
 
 其在幅度与响度上的变化范围明显小于DYN。由于变化程度过小，导致其无论在线性域还是在对数域的函数都近似线性函数。  
 但其分段点明显位于64。BRI64以下，函数斜率较大，幅度和响度跟随参数的变化明显。BRI64以上，函数斜率较小，幅度和响度随参数的变化极不明显。
-![bri db](/assets/images/bri-dyn/bri-db.png)
-![bri per](/assets/images/bri-dyn/bri-per.png)
+![bri db](/assets/images/bri-dyn/bri-db.webp)
+![bri per](/assets/images/bri-dyn/bri-per.webp)
