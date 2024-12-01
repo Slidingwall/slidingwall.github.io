@@ -242,6 +242,7 @@ home:
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: MathJax
 
 plugins:
   - jekyll-feed
