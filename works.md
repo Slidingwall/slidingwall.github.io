@@ -27,8 +27,8 @@ Bilibili已投稿作品的各种工程文件。
 #### [mandarin-reclist](/mandarin-reclist)
 
 用于录制中文普通话拼接式语音库的方案，用（最少）83条录音来完成一个中文CVVC声库、（最少）420条录音完成一个VCV声库。  
-同时促进了OpenUTAU的中文音素器支持[REPLACE]项，以简化oto工作，DeepVocal和VocalSharp的支持还在制作中。  
-*理论很丰满，但还没有付诸于实践 在考虑做韩日双语版，但感觉也没什么必要的样子
+同时促进了OpenUTAU的中文音素器支持`[REPLACE]`项，以简化oto工作。附赠oto模板生成器。  
+DeepVocal和VocalSharp的支持还在制作中。*理论很丰满，但还没有付诸于实践 在考虑做韩日双语版，但感觉也没什么必要的样子
 
 #### [hifisampler-rs](https://github.com/Slidingwall/hifisampler-rs)
 
