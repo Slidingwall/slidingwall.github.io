@@ -15,11 +15,12 @@ Bilibili已投稿作品的各种工程文件。
 【已存档】用于Synthesizer V的用户字典，以使语音库蹩脚的唱出另一种语言。附赠字典转换器。  
 介于Synthesizer V 2不提供免费版本，所有用户均能使用跨语种功能而遗憾停更。  
 
-可以[在这里](/synthv-dictionaries/Comparison)比较一下它与Vocaloid之间的音素差异。
+可以[在这里](/synthv-dictionaries/Comparison)比较一下Synthesizer V与Vocaloid之间的音素差异。
 
 #### [vocaloid-dictionaries](/vocaloid-dictionaries)
 
-用于vocaloid的工作插件，以使语音库蹩脚的唱出另一种语言。基于通用插件并新增拆音功能，附赠字典转换器。  
+用于vocaloid的工作插件，以使语音库蹩脚的唱出另一种语言。  
+基于通用插件并新增拆音功能，附赠字典转换器和改进后的几个现有插件。  
 正在无限期重构中。目前在向自动跨语种插件与第三方跨语种填词插件转型。
 
 同时寄存[Vocaloid Sample Parts](/vocaloid-dictionaries/Vocaloid-Sample-Parts)与[发音记号表](/vocaloid-dictionaries/symbol-charts)
