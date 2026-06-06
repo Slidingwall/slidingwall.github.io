@@ -11,8 +11,9 @@ top: 1
 ---
 
 > 译注：本文为该文档中文精翻，仅供学习参考使用，内容及立场不代表译者观点。  
-> 文章内容相关问题请咨询原作者。复现文章内容造成一切后果，均与译者无关。  
-> ~~[原文地址](https://docs.google.com/document/u/0/d/1vTHLPRp65ejcq5-bA7n_FP6CCgzG8_w0hgoYTCsAxq8)~~
+> 译者仅提供本文翻译与部分工具链搬运，相关问题请参照文内渠道咨询原作者。复现文章内容造成一切后果，均与译者无关。  
+> 文章内容可能不是最新，此处附原文地址供有条件的读者比对。  
+> ~~[原文地址](https://docs.google.com/document/u/0/d/1vTHLPRp65ejcq5-bA7n_FP6CCgzG8_w0hgoYTCsAxq8)~~  
 > [原文地址](https://docs.google.com/document/d/1q4hSjGxFzgZqlcvpF3NAhYiaA9DR1vbFHlM35tBnZVI)
 
 ### 前言
@@ -442,6 +443,8 @@ VOCALOID Component ID 是由14位数字组成的字符串，每一位都代表�
 
 只需启用`Advanced(高级)`选项，输入原始字符串，工具即可自动完成编码工作。现在您可以复制生成的 ID 并将其用于声库。**※ 请务必确保所有信息填写正确，否则可能会导致编码错误或声库在编辑器中出现故障。**
 
+> *译注：译者反编译了这里的VOCALOID2 Keygen并把CompID相关逻辑更新在了[VVDEditor](/VVD/help)中。*
+
 #### 如何创建 .vvd 文件？
 
 首先访问[VVD 编辑器](/VVD/)。如果您还没有 CompID，请点击`?`生成一个，或者使用您自己的 CompID。该网站默认仅支持中文和日文，但您也可以创建其他语言的声库。  
@@ -520,8 +523,10 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 
 - [EpR 文档扩展程序](https://rentry.org/xei39tdi)（来自 razer_rhela）
 - [VVD Editor Plus](https://slidingwall.github.io/VVD/help.html)（来自 UselessBug 和 atonyxu）（允许您为声库生成 VVD 文件、安装和卸载脚本。当您需要将声库打包以便在其他编辑器中使用时，此工具非常有用。）
+  > *译注：原文这里的链接就是译者fork的版本，现在更新了部分V4英语CompID、CompID编解码功能，还美化了一下网页排版。*
 - [DDB Tools](https://github.com/yuukawahiroshi/ddb-tools)（来自 Yuukawa Hiroshi）（用于将声库打包成 V3-V6 可以使用的可读格式）
 - [DDB Tools GUI](https://github.com/ayatinene/ddb-tools)（来自 UselessBug 和 Yuukawa Hiroshi）（一种更简便的声库打包方式。）
+  > *译注：译者用[Rust重写了GUI版](https://github.com/Slidingwall/ddb-toolbox-rs)，同时还加入了之前GUI不能执行的脚本。欢迎试用~~顺便帮忙检查哪里有BUG~~*
 - [Vocaloid 自定义语言 G2PA 表格](https://docs.google.com/spreadsheets/d/1Lr2VMc1g346xYltbI3fbal7m76TCVBlDAn-YZKLylTM/edit?gid=0)（来自 ZouZouPowa）
 - [Vocaloid 自定义语言 G2PA 基础文件](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（来自 Yanwu Project）
   > *译注：连接失效*
