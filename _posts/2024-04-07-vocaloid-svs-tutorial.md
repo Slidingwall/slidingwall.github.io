@@ -521,8 +521,9 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 **请注意误报，所有列出的工具均安全可靠且经过测试。请确保已安装 Python 3.10。*最好使用 Python 3.10，不要使用其他版本。某些工具已知对其他版本存在兼容性问题。**  
 **以上资源以及更多其他资源，您也可以在上方链接的 Discord 服务器中找到。**  
 
-- [EpR 文档扩展程序](https://rentry.org/xei39tdi)（来自 razer_rhela）
-- [VVD Editor Plus](https://slidingwall.github.io/VVD/help.html)（来自 UselessBug 和 atonyxu）（允许您为声库生成 VVD 文件、安装和卸载脚本。当您需要将声库打包以便在其他编辑器中使用时，此工具非常有用。）
+- [EpR 文档扩展程序](/歌声合成/2026/06/07/epr-documentation-extension)（来自 razer_rhela）
+  > *译注：此处链接为翻译版。*
+- [VVD Editor Plus](/VVD/help.html)（来自 UselessBug 和 atonyxu）（允许您为声库生成 VVD 文件、安装和卸载脚本。当您需要将声库打包以便在其他编辑器中使用时，此工具非常有用。）
   > *译注：原文这里的链接就是译者fork的版本，现在更新了部分V4英语CompID、CompID编解码功能，还美化了一下网页排版。*
 - [DDB Tools](https://github.com/yuukawahiroshi/ddb-tools)（来自 Yuukawa Hiroshi）（用于将声库打包成 V3-V6 可以使用的可读格式）
 - [DDB Tools GUI](https://github.com/ayatinene/ddb-tools)（来自 UselessBug 和 Yuukawa Hiroshi）（一种更简便的声库打包方式。）
