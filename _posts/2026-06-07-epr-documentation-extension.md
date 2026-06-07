@@ -94,7 +94,7 @@ default_epr_resonances_templates:
 依此类推……
 
 > 注意开头必须是 `default_epr_resonances_templates`。  
-> 词典里的默认数字可以留着不管。如果你想自己添加，可以查看 [自定义 EpR 模板](https://rentry.org/xei39tdi/#custom-filled-epr-template) ，这部分是独立于词典的。
+> 词典里的默认数字可以留着不管。如果你想自己添加，可以查看 [自定义 EpR 模板](/歌声合成/2026/06/07/epr-documentation-extension.html#h-自定义-epr-模板) ，这部分是独立于词典的。
 
 #### 设置 STA
 
@@ -129,7 +129,7 @@ default_epr_resonances_templates:
 
 像往常一样把 stationary 添加到数据库里，这一步可能会比平时多花一点时间。
 
-> （可选）如果你想自己指定 EpR 的数值，参见 [自定义 EpR 模板](https://rentry.org/xei39tdi/#custom-filled-epr-template)。然后跳过本节剩余部分。
+> （可选）如果你想自己指定 EpR 的数值，参见 [自定义 EpR 模板](/歌声合成/2026/06/07/epr-documentation-extension.html#h-自定义-epr-模板)。然后跳过本节剩余部分。
 
 接着点击 `Optimize EpR Guides（优化 EpR 指南）` …… 见证奇迹的时刻！！！！！！（并不）
 
