@@ -39,7 +39,7 @@ DeepVocal和VocalSharp的支持还在制作中。*理论很丰满，但还没有
 
 带有[GUI](https://github.com/ayatinene/ddb-tools)的[ddb-tools](https://github.com/yuukawahiroshi/ddb-tools)的rust重写，尽可能与Python原版保持一致。  
 
-#### Chinese translation of [Arpasing website](https://arpasing.neocities.org/zs/)
+#### Chinese translation of [Arpasing website](https://arpasing.tubs.wtf/zs/)
 
 Arpasing的中文教程翻译。
 
