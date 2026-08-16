@@ -2,11 +2,11 @@
 layout: post
 title: 强推一个写Jekyll博客的VScode插件
 date: 2024-04-07 03:13
-category: 技巧
+category: 随笔
 author: 滑墙
 tags: [Jekyll, VScode, 插件]
 summary: 
-excerpt_image: /assets/images/vscode-jekyll-1.webp
+excerpt_image: /assets/images/vscode-jekyll/1.webp
 ---
 
 ## 前言

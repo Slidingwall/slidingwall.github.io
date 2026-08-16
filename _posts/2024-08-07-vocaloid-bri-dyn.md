@@ -6,6 +6,7 @@ category: 歌声合成
 author: 滑墙
 tags: [歌声合成,Vocaloid,研究]
 summary: 
+excerpt_image: /assets/images/bri-dyn/dyn-db.webp
 ---
 
 ### 准备
