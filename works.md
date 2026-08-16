@@ -35,6 +35,10 @@ DeepVocal和VocalSharp的支持还在制作中。*理论很丰满，但还没有
 
 半成品，一个妄图使用rust重写[hifisampler](https://github.com/openhachimi/hifisampler)后端的构思。
 
+#### [ddb-toolbox-rs](https://github.com/Slidingwall/ddb-toolbox-rs)
+
+带有[GUI](https://github.com/ayatinene/ddb-tools)的[ddb-tools](https://github.com/yuukawahiroshi/ddb-tools)的rust重写，尽可能与Python原版保持一致。  
+
 #### Chinese translation of [Arpasing website](https://arpasing.neocities.org/zs/)
 
 Arpasing的中文教程翻译。
