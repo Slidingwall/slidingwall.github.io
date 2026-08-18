@@ -15,7 +15,7 @@ Bilibili已投稿作品的各种工程文件。
 【已存档】用于Synthesizer V的用户字典，以使语音库蹩脚的唱出另一种语言。附赠[字典转换器](/synthv-dictionaries/converter.html)。  
 介于Synthesizer V 2不提供免费版本，所有用户均能使用跨语种功能而遗憾停更。  
 
-可以[在这里](/synthv-dictionaries/Comparison)比较一下Synthesizer V与Vocaloid之间的音素差异。
+可以[在这里](/synthv-dictionaries/phoneme/Comparison/)比较一下Synthesizer V与Vocaloid之间的音素差异。
 
 #### [vocaloid-dictionaries](/vocaloid-dictionaries)
 
