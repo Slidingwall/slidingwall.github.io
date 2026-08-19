@@ -1,5 +1,4 @@
 ---
-layout: 
 title: 一些激活函数的化简
 date: 2024-12-01 14:26
 category: 随笔

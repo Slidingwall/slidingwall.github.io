@@ -1,5 +1,4 @@
 ---
-layout: 
 title: 【中译】无人在意的 RAXXER 的“Vocaloid 数据库文档”没用附加内容
 date: 2026-06-07 02:37
 category: 歌声合成

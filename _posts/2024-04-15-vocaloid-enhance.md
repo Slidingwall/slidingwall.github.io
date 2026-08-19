@@ -1,5 +1,4 @@
 ---
-layout: 
 title: 【吐槽】Vocaloid的不足之处
 date: 2024-07-26 18:02
 category: 歌声合成
