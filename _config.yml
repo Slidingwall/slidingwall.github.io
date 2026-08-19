@@ -208,6 +208,8 @@ defaults:
       type: posts
     values:
       layout: article
+      mode: normal
+      full_width: false
       sharing: true
       license: true
       aside:
@@ -215,7 +217,6 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
-      full_width: false
 
 
 ## => Plugins

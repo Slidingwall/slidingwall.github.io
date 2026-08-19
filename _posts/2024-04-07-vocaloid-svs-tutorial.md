@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: 
 title: 【中译】Vocaloid声库制作教程
 date: 2024-04-07 04:05
 modify_date: 2026-06-07 06:34
