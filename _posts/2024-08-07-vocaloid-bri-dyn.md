@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: article
 title: 【研究】DYN和BRI
 date: 2024-08-07 17:36
 category: 歌声合成

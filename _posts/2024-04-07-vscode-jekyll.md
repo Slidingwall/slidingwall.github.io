@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: article
 title: 强推一个写Jekyll博客的VScode插件
 date: 2024-04-07 03:13
 category: 随笔
