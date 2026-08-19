@@ -2,54 +2,73 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// Default theme colors
-$theme-colors: (
-  "coolblack": #090a0b,
-  "spacegrey": #353535,
-  "snowwhite": #ffffff,
-);
+@import
 
-// Default brand colors
-$brand-colors: (
-  "orangered": #ff5100,
-  "greatgold": #f2cb05,
-  "greenblue": #389092,
-);
+    "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
+    // "skins/chocolate",
+    // "skins/dark",
+    // "skins/default",
+    // "skins/forest",
+    // "skins/ocean",
+    // "skins/orange",
 
-$theme-name: "{{ site.theme_color }}";
-$brand-name: "{{ site.brand_color }}";
-$theme-color: map-get($theme-colors, "snowwhite");
-$brand-color: map-get($brand-colors, "orangered");
+    "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
+    // "skins/highlight/tomorrow",
+    // "skins/highlight/tomorrow-night",
+    // "skins/highlight/tomorrow-night-eighties",
+    // "skins/highlight/tomorrow-night-blue",
+    // "skins/highlight/tomorrow-night-bright",
 
-@if map-has-key($theme-colors, $theme-name) {
-  $theme-color: map-get($theme-colors, $theme-name);
-} @else if str-index($theme-name, "#") == 1 {
-  $theme-color: {{ site.theme_color | default: '#ffffff' }};
-}
 
-@if map-has-key($brand-colors, $brand-name) {
-  $brand-color: map-get($brand-colors, $brand-name);
-} @else if str-index($brand-name, "#") == 1 {
-  $brand-color: {{ site.brand_color | default: '#ff5100' }};
-}
+    "common/variables",
+    "common/function",
+    "common/classes",
+    "common/reset",
+    "common/print",
+    "common/components/button",
+    "common/components/image",
+    "common/components/card",
+    "common/components/gallery",
+    "common/components/hero",
+    "common/components/menu",
+    "common/components/modal",
+    "common/components/toc",
+    "common/components/item",
+    "common/components/swiper",
 
-$content-width: {{ site.content_width | default: '920px' }};
+    "animate/fade-in",
+    "animate/fade-in-down",
+    "animate/fade-in-up",
 
-// Click to top theme
-$click-to-top-light-background-color: {{ site.click_to_top.light.background_color | default: "white" }};
-$click-to-top-light-color: {{ site.click_to_top.light.color | default: "#454545" }};
-$click-to-top-dark-background-color: {{ site.click_to_top.dark.background_color | default: "#34323d" }};
-$click-to-top-dark-color: {{ site.click_to_top.dark.color | default: "#bbb" }};
+    "components/main",
+    "components/header",
+    "components/footer",
+    "components/article-list",
+    "components/article-info",
+    "components/article-header",
+    "components/article-content",
+    "components/article-footer",
+    "components/author-links",
+    "components/author-profile",
+    "components/tags",
+    "components/search",
+    "components/lightbox",
+    "components/extensions",
 
-// Selection styles
-$selection-color: unquote("{{ site.selection.color }}");
-$selection-background-color: unquote("{{ site.selection.background_color }}");
 
-@if $selection-color == "" {
-  $selection-color: inherit;
-}
-@if $selection-background-color == "" {
-  $selection-background-color: rgba(invert($brand-color), 0.3);
-}
+    "additional/alert",
+    "additional/tag",
+    "additional/photo-frame",
 
-@import "yat";
+    "layout/base",
+    "layout/page",
+
+    "layout/article",
+    "layout/articles",
+    "layout/archive",
+    "layout/home",
+    "layout/landing",
+    "layout/404",
+
+    "custom"
+;
