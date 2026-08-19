@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: posts
 title: 【自用中译】开发 vLabeler 插件
 date: 2026-08-17 06:43
 category: 歌声合成
