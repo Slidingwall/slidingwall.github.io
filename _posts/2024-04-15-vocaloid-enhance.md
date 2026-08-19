@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: article
 title: 【吐槽】Vocaloid的不足之处
 date: 2024-07-26 18:02
 category: 歌声合成
 author: 滑墙
 tags: [歌声合成, Vocaloid, 随笔]
-summary: 
+cover: 
 ---
 
 ## 混乱的发展路线

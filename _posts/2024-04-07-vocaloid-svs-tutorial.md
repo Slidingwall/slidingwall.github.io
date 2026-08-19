@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: article
 title: 【中译】Vocaloid声库制作教程
 date: 2024-04-07 04:05
 category: 歌声合成
 author: daigasso
 tags: [Vocaloid, 歌声合成, 翻译]
 summary: 
-excerpt_image: /assets/images/vocaloid-svs-tutorial/27.webp
+cover: /assets/images/vocaloid-svs-tutorial/27.webp
 top: 1
 ---
 

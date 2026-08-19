@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: article
 title: 【中译】无人在意的 RAXXER 的“Vocaloid 数据库文档”没用附加内容
 date: 2026-06-07 02:37
 category: 歌声合成
 author: RAXXER
 tags: [Vocaloid, 歌声合成, 翻译]
 summary: 
-excerpt_image: /assets/images/epr-document/80ntsv.webp
+cover: /assets/images/epr-document/80ntsv.webp
 top: 2
 ---
 > [原文地址](https://rentry.org/xei39tdi)

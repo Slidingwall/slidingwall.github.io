@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: article
 title: 【研究】DYN和BRI
 date: 2024-08-07 17:36
 category: 歌声合成
 author: 滑墙
 tags: [歌声合成,Vocaloid,研究]
 summary: 
-excerpt_image: /assets/images/bri-dyn/dyn-db.webp
+cover: /assets/images/bri-dyn/dyn-db.webp
 ---
 
 ### 准备
