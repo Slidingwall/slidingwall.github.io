@@ -6,7 +6,7 @@ category: 歌声合成
 author: RAXXER
 tags: [Vocaloid, 歌声合成, 翻译]
 summary: 
-cover: /assets/images/epr-document/80ntsv.webp
+cover: /assets/images/epr-document/bh09x4.webp
 top: 2
 ---
 > [原文地址](https://rentry.org/xei39tdi)
