@@ -543,41 +543,33 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
   > *译注：此资源可在bilibili中找到*
 - [SMSTools2](https://archive.org/details/smstools-2-application)
   > *译注：此资源可在bilibili中找到*
-- ~~[ViVi + VocaDev](https://archive.org/details/vivi-jpn-final)（无需保留Vivi）~~
-  > *译注：链接失效，此资源可在vocakey中找到 但已不再需要*
-- ~~[Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个无需安装即可注册声库的软件，但声库仅在Vocaloid 4 FE Plus中显示）~~
-  > *译注：链接失效，此资源可在vocakey中找到*
 - [Piapro V4X](https://elrincondelkitsune.blogspot.com/2016/12/piapro-sfe.html)（包含一个无需安装即可注册声库的软件，但声库仅在Piapro中显示）
   > *译注：此资源可在vocakey中找到*
 - [Deepvocal](https://www.deep-vocal.com/#/Product) 测试一下音域吧！！
 - [Canned Bread's Swiss Army Knife](https://github.com/bread-in-a-can/Canned-Bread-s-VOCALOIDDBTOOL-Swiss-Army-Knife)（创建空白的`.trans`文件，以及将`.oto`文件转换为`.seq`文件）
 - [QuickBMS](https://aluigi.altervista.org/quickbms.htm)
-- [VVD Editor Plus](/VVD/)（生成VVD文件、安装和卸载脚本。将声库打包以供其他编辑器使用时非常有用）
-  > *译注：文内链接均为译者fork版本，更新部分V4英语CompID。*
-- ~~[DDB Tools Colab版](https://colab.research.google.com/drive/1AMVBC5ex2QWffivwJm1qeavjBGpsnUQq?usp=sharing)（已更新为使用Github存储库）~~
-  > *译注：链接失效，[搬运链接](/assets/files/DDB_Packer_Colab.ipynb)，请自行在本地Jupyter或国内Colab平替中使用*
 - [oto2seg](https://github.com/yuukawahiroshi/oto2seg-for-VOCALOIDDBTOOL)（将UTAU oto转换为Vocaloid文件。它会切割样本，确保已安装ffmpeg和pydub，将其放在同一文件夹中。该工具并不完美，请确保样本清晰。仍需自备`Stationary`和`C/V Sil`。`m` `m'` `N` `N'`和`J`也不会自动生成。它会跳过不常见的日语组合，如Hu(ほぅ)、Fu(ふぅ)、Wu(うぅ)和Yi(いぃ)。）
-- ~~[自定义字典模板](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（不像其他字典那样正常工作。使用时，需替换Vocaloid目录中的一个字典文件。确保文件名称相同。不要删除被替换的字典，以便正常使用。）~~
-  > *译注：链接失效*
 - [GUMI英语录音表(非模板)](https://docs.google.com/spreadsheets/d/15eBYYlkggMVbqEL1AvLlmLTVvVrNpaqJs9TIl16Y9mE/edit?usp=sharing)（若能自行转换，您将获得模板）
   > *译注：[搬运链接](/assets/files/V3_list.xlsx)*
-- ~~[日语CVVC/VCV录音表+转录文件](https://www.mediafire.com/file/4bk3z9uh4or47ii/Vocaloidbase_CVVC_VCV_CC.zip/file)*(From Enlilgen)*~~
-  > *译注：链接失效*
 - [日语CVVC录音表+转录文件](https://github.com/InochiPM/Vocaloid-Reclist/releases/tag/Reclist-1.2)*(From Inochi-P)*
+
+以下内容已失效：
+- ~~[ViVi + VocaDev](https://archive.org/details/vivi-jpn-final)（无需保留Vivi）~~
+  > *译注：此资源可在vocakey中找到 但已不再需要*
+- ~~[Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个无需安装即可注册声库的软件，但声库仅在Vocaloid 4 FE Plus中显示）~~
+  > *译注：此资源可在vocakey中找到*
+- ~~[DDB Tools Colab版](https://colab.research.google.com/drive/1AMVBC5ex2QWffivwJm1qeavjBGpsnUQq?usp=sharing)（已更新为使用Github存储库）~~
+  > *译注：[搬运链接](/assets/files/DDB_Packer_Colab.ipynb)，请自行在本地Jupyter或国内Colab平替中使用，上方也列出了GUI版等可替代的版本*
+- ~~[自定义字典模板](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（不像其他字典那样正常工作。使用时，需替换Vocaloid目录中的一个字典文件。确保文件名称相同。不要删除被替换的字典，以便正常使用。）~~
+- ~~[日语CVVC/VCV录音表+转录文件](https://www.mediafire.com/file/4bk3z9uh4or47ii/Vocaloidbase_CVVC_VCV_CC.zip/file)*(From Enlilgen)*~~
 - ~~[基于单词的日语录音表](https://www.mediafire.com/file/ury58kwe3len0s0/Word_Based_Japanese.zip/file)*(From Ko Ko)* 像UTAU那样录制。每个音节对应一个音拍。（注意`N`算独立的音拍。）虽不完美，但这是一个很好的基础。采样需要复制粘贴。~~  
-  > *译注：链接失效*
 - ~~[基于单词的英语录音表](https://www.mediafire.com/file/9z0cch1acqcad1a/Word_Based_English.zip/file)*(From Canned Bread/luciozundiezz)* 像UTAU那样录制，每个音阶对应一个音拍。（参考GUMI的录音表决定要复制哪些样本）虽不完美，但这是一个很好的基础。采样需要复制粘贴。~~ 
-  > *译注：链接失效*
 - ~~[基于单词的西班牙语录音表PDF](https://www.mediafire.com/file/5pwt3cldp7baen1/Spanish+Reclist+-+Public+Research+Paper.pdf/file)*(From AnotherNN)* 虽不完美，但已精简。~~
-  > *译注：链接失效*
 - ~~[Vocaloid2Keygen](https://www.mediafire.com/file/9fo8mlep70m44xz/keygen.rar/file)~~
   > *译注：链接失效，需要找序列号生成逻辑请参见[VVD](/VVD/help.html)*
 - ~~[字典](https://www.mediafire.com/file/37q20qdvhrncibo/Dictionary_Collection.zip/file)*(From daigasso)*~~
-  > *译注：链接失效*
 - ~~[Takeo V2(示例CVVC声库+开发文件)](https://www.mediafire.com/file/fgsm4nrncw1av9a/TAKEO_V2.zip/file) （支持咆哮声，已更新为更响亮、更清晰的采样）提供以便于学习并解答关于应该做什么和不应该做什么的疑问。遵循`readme`文件即可尽情地分析它！进行各种实验，尽情发挥，把它作为开发您自己的录音列表或声库的基础。~~
-  > *译注：链接失效*
 - ~~Takeo V4 HARD(示例VCV/CVVC[声库](https://www.mediafire.com/file/1xshvtghv7u15he/TK_HARD_V4_VB.zip/file)+[开发文件](https://www.mediafire.com/file/id6fefspopincfq/TK_HARD_V4_DEV.zip/file))规则同V2声库，您可以交叉合成两个声库。~~  
-  > *译注：链接失效*
 
 ## 译文
 
