@@ -17,7 +17,7 @@ top: 2
 > 在继续往下看之前，强烈建议先去阅读 #tools-and-utilities 频道里的声库制作指南。  
 > 无论如何，这份文档都不会消失。需要帮助的话，请在 Discord 上联系我：razer_rhela  
 
-## EpR 估计
+# EpR 估计
 
 > EpR可以指 Excitation Plus Resonances（激励加共振），或者Estimated Pitch Range（估计音高范围），这里我们取后者。如果你熟悉 RVC，可以把它当成是索引文件。它不是必须的，但**确实**能明显提升声库的音质。  
 > EpR 背后的原理我不精通，但我可以教该怎么设置它！
@@ -34,7 +34,7 @@ top: 2
 
 信了吧？齿擦音上的效果最明显，音与音之间的过渡也会顺畅很多。
 
-### 嗯，那现在该怎么办？
+## 嗯，那现在该怎么办？
 
 你已经动手做声库了？那正好！现在你可以<font color="red">把大部分工作都扔掉！</font>
 
@@ -42,7 +42,7 @@ top: 2
 
 > 如果你用的是 **DaisyAnnotationTool** 来分段，那可以继续做完，不过 stationary 这一步请改用 VocaloidDBTool3 来做。
 
-#### 词典
+### 词典
 
 在重建声库文件夹之前，要确保你的词典末尾已经加上了 EpR 模板：
 
@@ -58,8 +58,8 @@ top: 2
 
 ```python
 default_epr_resonances_templates:
-	template(phoneme="ER"): ## 激励共振
-		200, 200 ## 250, 350
+	template(phoneme="ER"): # 激励共振
+		200, 200 # 250, 350
 		0, 0
 		0, 0
 		0, 0
@@ -69,8 +69,8 @@ default_epr_resonances_templates:
 
 ```python
 default_epr_resonances_templates:
-	template(phoneme="ER"): ## 激励共振
-		200, 200 ## 250, 350
+	template(phoneme="ER"): # 激励共振
+		200, 200 # 250, 350
 		0, 0
 		0, 0
 		0, 0
@@ -95,7 +95,7 @@ default_epr_resonances_templates:
 > 注意开头必须是 `default_epr_resonances_templates`。  
 > 词典里的默认数字可以留着不管。如果你想自己添加，可以查看 [自定义 EpR 模板](/歌声合成/2026/06/07/epr-documentation-extension.html#h-自定义-epr-模板) ，这部分是独立于词典的。
 
-#### 设置 STA
+### 设置 STA
 
 要让 EpR 发挥最大效果，需要把 stationary 录音拼接起来。这个做法在工具包的一份西班牙语文档里也出现过。
 
@@ -110,7 +110,7 @@ default_epr_resonances_templates:
 
 上面是 [a] 的例子，其他元音同理。辅音的 EpR 估计会基于你常规的配置（据我所知）。
 
-#### 分段
+### 分段
 
 现在是最轻松的一步。如果你以前做过声库，现在只想加上 EpR 模板，那就把 `.wav`、`.seg` 和 `.trans` 文件拿过来用，注意不要混进旧的 stationary。为你的 stationary 新建空白的 `.trans` 文件。
 
@@ -140,7 +140,7 @@ default_epr_resonances_templates:
 
 ![进度条](/assets/images/epr-document/8rffm2.gif)
 
-#### 确认它真的干活了
+### 确认它真的干活了
 
 进到你新建的声库文件夹里，会看到一个叫 `epr_templates.txt` 的文件，里面应该已经填好内容了。
 
@@ -148,21 +148,21 @@ default_epr_resonances_templates:
 
 完事。把剩下的声库文件加回去，再切一下辅音，你就得到了属于你自己的 EpR，大家会夸你的。
 
-### 报错
+## 报错
 
-#### 无法估计第一帧和/或最后一帧的 EpR
+### 无法估计第一帧和/或最后一帧的 EpR
 
 ![报错](/assets/images/epr-document/q0c1jc.webp)
 
 要么是切的位置太近了，要么是你在 EpR 字符串前面（或上面）不小心打了制表符（一般是按 Tab 键出来的）。
 
-#### 以下 stationary 的手动 EpR 估计在不同音高上可能不一致
+### 以下 stationary 的手动 EpR 估计在不同音高上可能不一致
 
 ![报错](/assets/images/epr-document/0jwedc.webp)
 
 系统读不出音高线，不过这个影响不大。
 
-## 自定义 EpR 模板
+# 自定义 EpR 模板
 
 使用 [PRAAT](https://www.fon.hum.uva.nl/praat/) 来修改默认数值。
 
@@ -218,21 +218,21 @@ default_epr_resonances_templates:
 
 你原来的 `epr_templates.txt` 会被替换掉，系统会根据你填的初始值再做一次优化。之后就可以继续正常的声库制作流程了。
 
-#### 跟直接使用默认数值比起来，差别大吗？
+### 跟直接使用默认数值比起来，差别大吗？
 
 **其实不大**，这部分还需要更多测试。
 
-## LSF（线谱频率）
+# LSF（线谱频率）
 
 点击 Compute LSF（remake EpR）会搞乱多个参数设置。
 
 点击 Compute LSF（Keep EpR）则会破坏 v4dev，而且编译时直接崩溃。
 
-## 稳定标记（循环区域）
+# 稳定标记（循环区域）
 
 你可以调整 CV 的循环起点，让 stationary 放在采样最稳定的部分。实际上 stationary 并不会把 CV 拉长，它们只是帮忙给采样做共振峰处理（如果我没记错的话）。待施工。
 
-## phn_seg.py
+# phn_seg.py
 
 phn_seg.py 是开发套件用来估计音素位置的脚本。点击 `Segment phonemes` 时调用的就是它。它是根据音量大小来估算音素边界的。如果你在用 **DaisyAnnotationTool**，那基本用不上这个。
 

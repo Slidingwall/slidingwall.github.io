@@ -16,7 +16,7 @@ top: 1
 > ~~[原文地址](https://docs.google.com/document/u/0/d/1vTHLPRp65ejcq5-bA7n_FP6CCgzG8_w0hgoYTCsAxq8)~~  
 > [原文地址](https://docs.google.com/document/d/1q4hSjGxFzgZqlcvpF3NAhYiaA9DR1vbFHlM35tBnZVI)
 
-### 前言
+## 前言
 
 请勿转载
 
@@ -28,7 +28,7 @@ top: 1
 
 **请不要尝试**利用“资源”中的信息或工具牟利。  
 
-## Vocaloid声库制作教程
+# Vocaloid声库制作教程
 
 逐步制作Vocaloid3-5声库的指南。  
 
@@ -37,7 +37,7 @@ top: 1
 
 作者：daigasso  
 
-### 常见问题
+## 常见问题
 
 遇到问题了吗？请务必仔细阅读所有内容！记得查看常见问题部分。
 仍然遇到问题？加入 [Discord](https://discord.gg/JaVXBHx74n) 服务器获取支持和/或与其他开发者交流。**【目前仅接受申请加入】**
@@ -131,7 +131,7 @@ top: 1
 **问：为什么不直接用 CV 呢？**  
 答：[Arsloid](https://vocaloid.fandom.com/wiki/ARSLOID_(VOCALOID4)#SOFT_)，就是这样。玩笑归玩笑，Vocaloid 仅靠 CV 是无法使用的。它在声库格式方面远不如 UTAU 那样灵活。
 
-### 文件夹准备
+## 文件夹准备
 
 这个过程与制作 UTAU 声库非常相似。基本步骤如下：规划音阶，创建文件夹，然后将采样添加到相应文件夹中。<u>最多</u>支持创建 11 个音阶，避免超过这个数量。  
 Vocaloid 使用`Stationary`和`Articulation`。`Stationary`采样有助于声库在音符中间保持音高。您可以将其理解为长元音采样。`Articulation`可以是 CV、CVVC、VCV 等。更专业地说，`Articulation`存储的是音素之间的衔接段。  
@@ -149,7 +149,7 @@ Vocaloid 使用`Stationary`和`Articulation`。`Stationary`采样有助于声库
 **※以上截图中的“N_”代表“正常”，并非强制命名要求。**  
 **※音频格式很重要！无论如何，音频格式始终相同，即<u>44.1kHz、16位、单声道、`.wav`格式</u>。**  
 
-### 什么是Articulation/Stationary？
+## 什么是Articulation/Stationary？
 
 **更详细的解释：**
 
@@ -159,7 +159,7 @@ Vocaloid 使用`Stationary`和`Articulation`。`Stationary`采样有助于声库
 `Articulation`，或称衔接采样，是指的元音与辅音衔接处的采样。`Articulation`没有限制，您可以完全自主优化。这意味着您可以添加CV、VC，甚至是CCV采样。<u>简单来说，它们就是UTAU中的CV、CVVC、VCV等。</u>  
 ![](/assets/images/vocaloid-svs-tutorial/6.webp)
 
-### 转录
+## 转录
 
 顾名思义，转录就是将音频文件转录成文本。它们是扩展名为`.trans`的文本文件。请务必确保转录文件与其对应的音频文件同名，并位于同一文件夹中。每个音高的每个音频文件都需要一对转录文件。它们类似于 UTAU 的别名功能。  
 <u>换句话说，转录文件用于指定音频样本的内容以及应该从中提取哪些音素。</u>  
@@ -206,7 +206,7 @@ Vocaloid 使用“上下文”系统，允许某些音素仅在特定情况下�
 **※ 不要让 Vocaloid 自动填充语音过渡的空隙，这会导致编辑器中输出的声音非常生硬。缺失的转录意味着产生这样的空隙。为了获得最佳效果，请务必确保所有必要的语音过渡都有采样。**
 **※ 为了更快捷地解决问题，您可以使用“资源”中列出的自动转录工具。使用时请注意，务必仔细检查并更正转录文本。**
 
-### 加载声库
+## 加载声库
 
 您需要一个字典，可以从“资源”中下载。首先创建一个 `.txt` 文件，并将其命名为声库名称。请避免使用过长的名称和句点。  
 点击`File(文件) -> New Singer Database(新建声库)`，加载您选择的字典与您声库名字命名的空`.txt`。系统将会自动生成与`.txt`同名的一个文件夹、一个`.dat`和一个`.tree`文件。，名称与您选择的名称一致。再次打开时，可从`singer.inf`所在的文件夹重新加载声库。  
@@ -219,7 +219,7 @@ Vocaloid 使用“上下文”系统，允许某些音素仅在特定情况下�
 音素下方会有`X`标记，其余部分基本为空。请记住，从左到右音调由低到高。添加录音后，它们会以小点的形式显示在这里。您可以点击它们进行查看、收听和编辑。随着您添加更多录音，`X`标记的数字也会增加。
 ![](/assets/images/vocaloid-svs-tutorial/15.webp)
 
-### 分段与标注（制作声库）
+## 分段与标注（制作声库）
 
 要打开配置对话框，请点击`File(文件)->Automatic Segmentation(自动分段)`，然后找到 wav+转录文件（子文件夹可以正确识别，但请确保所有转录文件都已准备就绪）。  
 **※ 尽管名称为`Automatic Database Creation Dialog(自动创建声库对话框)`，但配置过程实际上并非自动完成。**
@@ -298,7 +298,7 @@ Vocaloid 使用“上下文”系统，允许某些音素仅在特定情况下�
 **在任何情况下，进行任何编辑、更正或调整时，请务必先从声库中移除`Stationary`/`Articulation`。当然，完成后您可以再添加回去。否则可能会导致无法挽回的错误。**  
 ![](/assets/images/vocaloid-svs-tutorial/37.webp)
 
-### 字典
+## 字典
 
 如果词典缺少音素，或者音素分类错误，请转到`Special(特殊) -> Change Phonetic Unit Group(更改音素单元组)`，并进行所有必要的更正。  
 ![](/assets/images/vocaloid-svs-tutorial/38.webp)  
@@ -308,12 +308,12 @@ Vocaloid 使用“上下文”系统，允许某些音素仅在特定情况下�
 
 实际上这方面几乎没有任何限制，所以请随意尝试各种不同的声音。
 
-### ※ 可选/自定义 G2PA（音节无效）
+## ※ 可选/自定义 G2PA（音节无效）
 
 好吧，也许您兴致勃勃。您想实现对一种尚未被原生支持的语言，甚至是音标系统的支持。  
 假设并非所有读者都了解 G2PA 或 X-Sampa 是什么，我会尽力涵盖本节您需要知道的所有内容。  
 
-#### 什么是 G2PA？
+### 什么是 G2PA？
 
 如果您之前至少查看过一次 Vocaloid 文件，您很可能见过一些名为`g2pa3_JPN.dll`或`g2pa3_ENG.dll`的 `.dll` 文件。
 
@@ -321,14 +321,14 @@ Vocaloid 使用“上下文”系统，允许某些音素仅在特定情况下�
 
 ![](/assets/images/vocaloid-svs-tutorial/40.webp)  
 
-#### 什么是 X-Sampa？
+### 什么是 X-Sampa？
 
 首先要说明一点：[X-Sampa](https://zh.wikipedia.org/wiki/X-SAMPA)并非[Vocaloid](https://vocaloid.fandom.com/wiki/Phoneme_List)独有的东西。  
 X-Sampa（Extended Speech Assessment Methods Phonetic Alphabet，拓展音标字母评估法）是一种使用ASCII字符表示国际音标的系统。**初音未来并没有发明它。**  
 Vocaloid使用X-Sampa作为其音标系统。因此通常情况下，在制作词典和G2PA时会用到它。尽管如此，只要方法正确并针对Vocaloid进行优化，完全可以实现您自己的音标系统。  
 ![](/assets/images/vocaloid-svs-tutorial/41.webp)
 
-#### 那么，我该如何自己制作一个呢？又该如何让它在我的编辑器中运行呢？
+### 那么，我该如何自己制作一个呢？又该如何让它在我的编辑器中运行呢？
 
 “资源”包含一个模板。请搜索`Custom G2PA Base`。  
 `.zip` 文件包含一个 `.dll` 文件和一个 `.ini` 文件。两者都可以正常工作。Vocaloid 应该能够读取这两种文件。如果您熟悉如何编写和制作动态链接库，那就尽管使用吧。然而，并非每个人都知道如何实现这种“魔法”，因此我将解释更简单的方法，即编写 `.ini` 文件而不是 `.dll` 文件。
@@ -358,7 +358,7 @@ G2PA 编写完成后，前往 `C:\Program Files (x86)\VOCALOID4\Editor` 或 `C:\
 
 大功告成！自定义 G2PA 现在应该可以在 Vocaloid 中正常工作了。（特别感谢 ZouZouPowa 解决了这个问题！）  
 
-### Vocaloid 4 开发版使用说明
+## Vocaloid 4 开发版使用说明
 **※ 如果您好奇的话，此处无需保留 VIVI 的声库。**  
 
 您需要设置开发版编辑器，然后填写声库路径。您可能已经知道，Vocaloid 必须至少安装一个声库才能运行，请记住这一点。与常规版本一样，编辑器启动也需要声库。  
@@ -367,7 +367,7 @@ G2PA 编写完成后，前往 `C:\Program Files (x86)\VOCALOID4\Editor` 或 `C:\
 
 此版本的 Vocaloid 编辑器仅用于测试目的，因此存在一些限制，例如不支持 XSY 交叉合成等。  
 
-### SYNTHESIS_WORKSPACE(W)
+## SYNTHESIS_WORKSPACE(W)
 
 SYNTHESIS_WORKSPACE（合成工作区）是 DBTool 众多实用功能之一。它允许您直接查看 Vocaloid 编辑器如何使用声库。要访问此功能，只需从开发编辑器渲染一个序列，并将其与 `.msd` 文件一起保存即可。
 ![](/assets/images/vocaloid-svs-tutorial/43.webp)
@@ -383,12 +383,13 @@ SYNTHESIS_WORKSPACE（合成工作区）是 DBTool 众多实用功能之一。�
 
 记住这一点很有帮助，因为它可以帮助您追踪诸如语音或音调缺陷之类的问题。
 
-### 打包声库及Component ID
+## 打包声库及Component ID
 
-#### 需要什么？
+### 需要什么？
 - 您配置完整的开发声库
 - [Python 3.10](https://www.python.org/downloads/release/python-3100/)  
 - [Yuukawa Hiroshi 的 ddbtools](https://github.com/yuukawahiroshi/ddb-tools)；它也有图形界面版本和 `.exe` 文件（资源）  
+  > *译注：译者用[Rust重写了GUI版](https://github.com/Slidingwall/ddb-toolbox-rs)，欢迎试用~*
 
 ***不需要使用 conda。**
 
@@ -424,12 +425,12 @@ python pack_ddb.py --src_path "[声库 .tree 文件路径]" --dst_path "[输出�
 
 马上就要成功了，但仅凭 `.ddb` 和 `.ddi` 文件是无法使用声库的。您还需要 `.vvd` 文件和组件 ID。  
 
-#### 那么，这些是什么呢？
+### 那么，这些是什么呢？
 
 `.vvd` 文件包含声库的相关信息，例如声库名称、Component ID、所属公司等等。（简而言之，就是元数据）  
 Component ID 是分配给每个声库的唯一 ID。**务必确保声库 ID 与其他声库的 ID 不重叠。**  
 
-#### 如何生成 CompID？
+### 如何生成 CompID？
 
 最简单生成 CompID 的方法是直接使用 VVDEditor 工具。但是建议不要这样做，或者至少不要总是这样做。  
 VVDEditor 的 ID 列表有限，只有大约 20 个（或更少），因此 ID 存在重叠的风险，而这是不希望发生的。  
@@ -445,7 +446,7 @@ VOCALOID Component ID 是由14位数字组成的字符串，每一位都代表�
 
 > *译注：译者反编译了这里的VOCALOID2 Keygen并把CompID相关逻辑更新在了[VVDEditor](/VVD/help)中。*
 
-#### 如何创建 .vvd 文件？
+### 如何创建 .vvd 文件？
 
 首先访问[VVD 编辑器](/VVD/)。如果您还没有 CompID，请点击`?`生成一个，或者使用您自己的 CompID。该网站默认仅支持中文和日文，但您也可以创建其他语言的声库。  
 获得 CompID 后，返回首页并将其粘贴到`声库 CompID`栏中。同时，请确保在`声库名称`栏中输入您声库的姓名。  
@@ -461,13 +462,13 @@ VOCALOID Component ID 是由14位数字组成的字符串，每一位都代表�
 如果您进行了任何编辑，请务必点击`加密`。
 完成后，点击`下载声库VVD`，也可以通过`下载安装脚本`生成`.bat`安装脚本。虽然这不是必须的，但并非强制要求。（需允许网站下载多个文件）
 
-#### 最后，准备最终的文件夹
+### 最后，准备最终的文件夹
 
 创建一个文件夹，并将`.ddb`、`.ddi`和`.vvd`文件放入其中，文件夹名称为声库CompID。请务必确保所有文件名称相同，否则编辑器可能无法读取声库信息。（您也可以稍后更改所有文件名）
 
 **※ 可选，V4 的 Mixins/Growl 打包**
 
-#### 需要什么？
+### 需要什么？
 - 一个已打包的声库
 - 一个**带有** Growl 的 V4 声库（例如 V4 Flower、Cyber​​ Songman 等）  
 - ddbtools（链接见上文）
@@ -488,7 +489,7 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 
 **※ 请勿为同一个声库创建多个 CompID！在重新打包的情况下，您可以重复使用同一个 CompID。**
 
-### 导入Vocaloid编辑器
+## 导入Vocaloid编辑器
 
 将打包好的声库（如果有的话，还需要安装程序）后，您可以使用**Vocaloid 4 FE Plus**的Voice Management将其加载到软件中。启动软件，通过`File import(文件导入)`找到声库，并可选择解锁XSY。 
 
@@ -504,7 +505,7 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 这样声库也会出现在 Tunelab 中，使其完全可用。  
 ![](/assets/images/vocaloid-svs-tutorial/55.webp)
 
-#### 添加Vocaloid 5/6的图像
+### 添加Vocaloid 5/6的图像
 
 - 您需要查看以下路径：
   **C:\Program Files\Common Files\VOCALOID5\Resource\Voice**  
@@ -516,7 +517,7 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 <u>**务必记住要保持设置 bmp 的正确尺寸！**</u>  
 ![](/assets/images/vocaloid-svs-tutorial/57.webp) 
 
-### 资源
+## 资源
 
 **请注意误报，所有列出的工具均安全可靠且经过测试。请确保已安装 Python 3.10。*最好使用 Python 3.10，不要使用其他版本。某些工具已知对其他版本存在兼容性问题。**  
 **以上资源以及更多其他资源，您也可以在上方链接的 Discord 服务器中找到。**  
@@ -529,21 +530,23 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 - [DDB Tools GUI](https://github.com/ayatinene/ddb-tools)（来自 UselessBug 和 Yuukawa Hiroshi）（一种更简便的声库打包方式。）
   > *译注：译者用[Rust重写了GUI版](https://github.com/Slidingwall/ddb-toolbox-rs)，同时还加入了之前GUI不能执行的脚本。欢迎试用~~顺便帮忙检查哪里有BUG~~*
 - [Vocaloid 自定义语言 G2PA 表格](https://docs.google.com/spreadsheets/d/1Lr2VMc1g346xYltbI3fbal7m76TCVBlDAn-YZKLylTM/edit?gid=0)（来自 ZouZouPowa）
-- [Vocaloid 自定义语言 G2PA 基础文件](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（来自 Yanwu Project）
-  > *译注：连接失效*
+- ~~[Vocaloid 自定义语言 G2PA 基础文件](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（来自 Yanwu Project）~~
+  > *译注：链接失效*
 - [Phn_Seg_edit](https://files.catbox.moe/orxb7r.rar)（来自 H5X2） **Phn_Seg.py** 的一个分支；生成类似 moresampler 的基础文件。您需要 wav 文件和转录文件。
+  > *译注：[搬运链接](/assets/files/orxb7r.rar)*
 - [Lab to seg](https://drive.google.com/file/d/1Q1rUyF08BVCmDxuYPKkSut5CBX_OIx1J/view)（来自 Rozea/Kori）
+  > *译注：[搬运链接](/assets/files/lab2seg.7z)*
 - [Melodyne](https://drive.google.com/file/d/1Ga566Es8hLinnDZxbxVMTOwuLzwzVdIT/view?usp=drivesdk)  用于编辑或校正采样音高（如有需要）。
 
-旧版文档中的资源：
+### 旧版文档中的资源
 - [VocaloidDBTool3](https://archive.org/details/vocaloid3-developer-kit)
   > *译注：此资源可在bilibili中找到*
 - [SMSTools2](https://archive.org/details/smstools-2-application)
   > *译注：此资源可在bilibili中找到*
 - ~~[ViVi + VocaDev](https://archive.org/details/vivi-jpn-final)（无需保留Vivi）~~
-  > *译注：此资源可在vocakey中找到 链接仍有效，但已不再需要*
-- [Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个无需安装即可注册声库的软件，但声库仅在Vocaloid 4 FE Plus中显示）
-  > *译注：此资源可在vocakey中找到*
+  > *译注：链接失效，此资源可在vocakey中找到 但已不再需要*
+- ~~[Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个无需安装即可注册声库的软件，但声库仅在Vocaloid 4 FE Plus中显示）~~
+  > *译注：链接失效，此资源可在vocakey中找到*
 - [Piapro V4X](https://elrincondelkitsune.blogspot.com/2016/12/piapro-sfe.html)（包含一个无需安装即可注册声库的软件，但声库仅在Piapro中显示）
   > *译注：此资源可在vocakey中找到*
 - [Deepvocal](https://www.deep-vocal.com/#/Product) 测试一下音域吧！！
@@ -551,26 +554,32 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 - [QuickBMS](https://aluigi.altervista.org/quickbms.htm)
 - [VVD Editor Plus](/VVD/)（生成VVD文件、安装和卸载脚本。将声库打包以供其他编辑器使用时非常有用）
   > *译注：文内链接均为译者fork版本，更新部分V4英语CompID。*
-- [DDB Tools](https://github.com/yuukawahiroshi/ddb-tools)（将声库打包成V3~V6都可以使用的格式。需自备含有咆哮声ddb和ddi文件，我们没法直接提供。可用VY1或Flower的,CYBER SONGMAN是最原始的咆哮声源。）
-- [Colab版](https://colab.research.google.com/drive/1AMVBC5ex2QWffivwJm1qeavjBGpsnUQq?usp=sharing)（已更新为使用Github存储库）
-  > *译注：[搬运链接](/assets/files/DDB_Packer_Colab.ipynb)，请自行在本地Jupyter或国内Colab平替中使用*
-- [DDB Tools GUI](https://github.com/ayatinene/ddb-tools)*(From UselessBug)*（更简单的打包工具，需要Python。在cmd中执行`python -m pip install -r requirements.txt`以安装。安装后，执行`python GUI.py`即可启动。）
+- ~~[DDB Tools Colab版](https://colab.research.google.com/drive/1AMVBC5ex2QWffivwJm1qeavjBGpsnUQq?usp=sharing)（已更新为使用Github存储库）~~
+  > *译注：链接失效，[搬运链接](/assets/files/DDB_Packer_Colab.ipynb)，请自行在本地Jupyter或国内Colab平替中使用*
 - [oto2seg](https://github.com/yuukawahiroshi/oto2seg-for-VOCALOIDDBTOOL)（将UTAU oto转换为Vocaloid文件。它会切割样本，确保已安装ffmpeg和pydub，将其放在同一文件夹中。该工具并不完美，请确保样本清晰。仍需自备`Stationary`和`C/V Sil`。`m` `m'` `N` `N'`和`J`也不会自动生成。它会跳过不常见的日语组合，如Hu(ほぅ)、Fu(ふぅ)、Wu(うぅ)和Yi(いぃ)。）
-- [自定义字典模板](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（不像其他字典那样正常工作。使用时，需替换Vocaloid目录中的一个字典文件。确保文件名称相同。不要删除被替换的字典，以便正常使用。）
+- ~~[自定义字典模板](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（不像其他字典那样正常工作。使用时，需替换Vocaloid目录中的一个字典文件。确保文件名称相同。不要删除被替换的字典，以便正常使用。）~~
+  > *译注：链接失效*
 - [GUMI英语录音表(非模板)](https://docs.google.com/spreadsheets/d/15eBYYlkggMVbqEL1AvLlmLTVvVrNpaqJs9TIl16Y9mE/edit?usp=sharing)（若能自行转换，您将获得模板）
   > *译注：[搬运链接](/assets/files/V3_list.xlsx)*
-- [日语CVVC/VCV录音表+转录文件](https://www.mediafire.com/file/4bk3z9uh4or47ii/Vocaloidbase_CVVC_VCV_CC.zip/file)*(From Enlilgen)*
+- ~~[日语CVVC/VCV录音表+转录文件](https://www.mediafire.com/file/4bk3z9uh4or47ii/Vocaloidbase_CVVC_VCV_CC.zip/file)*(From Enlilgen)*~~
+  > *译注：链接失效*
 - [日语CVVC录音表+转录文件](https://github.com/InochiPM/Vocaloid-Reclist/releases/tag/Reclist-1.2)*(From Inochi-P)*
-- [基于单词的日语录音表](https://www.mediafire.com/file/ury58kwe3len0s0/Word_Based_Japanese.zip/file)*(From Ko Ko)* 像UTAU那样录制。每个音节对应一个音拍。（注意`N`算独立的音拍。）虽不完美，但这是一个很好的基础。采样需要复制粘贴。  
-- [基于单词的英语录音表](https://www.mediafire.com/file/9z0cch1acqcad1a/Word_Based_English.zip/file)*(From Canned Bread/luciozundiezz)* 像UTAU那样录制，每个音阶对应一个音拍。（参考GUMI的录音表决定要复制哪些样本）虽不完美，但这是一个很好的基础。采样需要复制粘贴。 
-- [基于单词的西班牙语录音表PDF](https://www.mediafire.com/file/5pwt3cldp7baen1/Spanish+Reclist+-+Public+Research+Paper.pdf/file)*(From AnotherNN)* 虽不完美，但已精简。
-- [Vocaloid2Keygen](https://www.mediafire.com/file/9fo8mlep70m44xz/keygen.rar/file)
-- [字典](https://www.mediafire.com/file/37q20qdvhrncibo/Dictionary_Collection.zip/file)*(From daigasso)*
-- [Melodyne](https://drive.google.com/file/d/1Ga566Es8hLinnDZxbxVMTOwuLzwzVdIT/view?usp=drivesdk)如果需要的话，编辑或校正样本的音高！
-- [Takeo V2(示例CVVC声库+开发文件)](https://www.mediafire.com/file/fgsm4nrncw1av9a/TAKEO_V2.zip/file) （支持咆哮声，已更新为更响亮、更清晰的采样）提供以便于学习并解答关于应该做什么和不应该做什么的疑问。遵循`readme`文件即可尽情地分析它！进行各种实验，尽情发挥，把它作为开发您自己的录音列表或声库的基础。
-- Takeo V4 HARD(示例VCV/CVVC[声库](https://www.mediafire.com/file/1xshvtghv7u15he/TK_HARD_V4_VB.zip/file)+[开发文件](https://www.mediafire.com/file/id6fefspopincfq/TK_HARD_V4_DEV.zip/file))规则同V2声库，您可以交叉合成两个声库。  
+- ~~[基于单词的日语录音表](https://www.mediafire.com/file/ury58kwe3len0s0/Word_Based_Japanese.zip/file)*(From Ko Ko)* 像UTAU那样录制。每个音节对应一个音拍。（注意`N`算独立的音拍。）虽不完美，但这是一个很好的基础。采样需要复制粘贴。~~  
+  > *译注：链接失效*
+- ~~[基于单词的英语录音表](https://www.mediafire.com/file/9z0cch1acqcad1a/Word_Based_English.zip/file)*(From Canned Bread/luciozundiezz)* 像UTAU那样录制，每个音阶对应一个音拍。（参考GUMI的录音表决定要复制哪些样本）虽不完美，但这是一个很好的基础。采样需要复制粘贴。~~ 
+  > *译注：链接失效*
+- ~~[基于单词的西班牙语录音表PDF](https://www.mediafire.com/file/5pwt3cldp7baen1/Spanish+Reclist+-+Public+Research+Paper.pdf/file)*(From AnotherNN)* 虽不完美，但已精简。~~
+  > *译注：链接失效*
+- ~~[Vocaloid2Keygen](https://www.mediafire.com/file/9fo8mlep70m44xz/keygen.rar/file)~~
+  > *译注：链接失效，需要找序列号生成逻辑请参见[VVD](/VVD/help.html)*
+- ~~[字典](https://www.mediafire.com/file/37q20qdvhrncibo/Dictionary_Collection.zip/file)*(From daigasso)*~~
+  > *译注：链接失效*
+- ~~[Takeo V2(示例CVVC声库+开发文件)](https://www.mediafire.com/file/fgsm4nrncw1av9a/TAKEO_V2.zip/file) （支持咆哮声，已更新为更响亮、更清晰的采样）提供以便于学习并解答关于应该做什么和不应该做什么的疑问。遵循`readme`文件即可尽情地分析它！进行各种实验，尽情发挥，把它作为开发您自己的录音列表或声库的基础。~~
+  > *译注：链接失效*
+- ~~Takeo V4 HARD(示例VCV/CVVC[声库](https://www.mediafire.com/file/1xshvtghv7u15he/TK_HARD_V4_VB.zip/file)+[开发文件](https://www.mediafire.com/file/id6fefspopincfq/TK_HARD_V4_DEV.zip/file))规则同V2声库，您可以交叉合成两个声库。~~  
+  > *译注：链接失效*
 
-### 译文
+## 译文
 
 本文档的翻译版  
 以下译文由其他用户提供，因此可能已过时或有所更改。  

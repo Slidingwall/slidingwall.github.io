@@ -7,7 +7,7 @@ tags: [vlabeler, 歌声合成, 翻译]
 summary: 
 ---
 
-## 开发自定义标注器
+# 开发自定义标注器
 **标注器（labeler）** 是一组配置文件与脚本，针对特定标注场景定义应用的多项行为。
 
 本文档将引导你为 `vLabeler` 开发自定义标注器。
@@ -25,10 +25,10 @@ summary:
     - [注入参数值](#注入参数值)
 - [其他说明](#其他说明)
 
-### 理解 vLabeler 项目
+## 理解 vLabeler 项目
 开始前，需要先了解 `vLabeler` 的项目结构基础知识。
 
-#### 条目（Entry）
+### 条目（Entry）
 **条目（entry）** 是 `vLabeler` 内最小数据单元，代表一段带起始时刻和时长的音频数据。
 大多数歌声合成软件都使用类似方式表达音频数据。例如在 UTAU 中，条目对应 `oto.ini` 里的一行；在 NNSVS 中，条目对应 `lab` 文件内的一行。
 
@@ -36,14 +36,14 @@ summary:
 
 在 `vLabeler` 中，我们把已有标签数据转换成条目，然后编辑条目——这是标注流程的核心。编辑完成后，再把条目转回原始标签格式。
 
-#### 模块（Module）
+### 模块（Module）
 **模块（module）** 是 `vLabeler` 的子项目（UI 中称为 `subproject`，代码/开发文档中称为 `module`）。
 
 一个模块包含一组条目。很多声库的条目以层级形式组织，因此我们用模块来表达这种层级关系。
 
 模块需要拥有名称、指向音频文件所在目录的引用、原始标签文件（如 `oto.ini` / `lab`）的引用，以此支持批量导入与导出。
 
-#### 项目（Project）
+### 项目（Project）
 **项目（project）** 是模块的集合，同时包含元信息，例如项目名、声库根目录等。
 
 以 UTAU 歌手声库举例，声库结构可能如下：
@@ -92,7 +92,7 @@ your_vlabeler_project
 
 下面章节介绍标注器结构，以及如何开发自定义标注器。
 
-### 标注器结构
+## 标注器结构
 标注器是一个文件夹，结构如下：
 ```
 your_labeler
@@ -113,7 +113,7 @@ your_labeler
 1.0.0-beta20（标注器序列化版本号2）之前，标注器是后缀 `.labeler.json` 的单个文件，不支持外部资源文件，所有脚本直接内嵌在JSON内。该格式仍可兼容使用，但推荐使用新目录结构。
 </details>
 
-#### 脚本引用
+### 脚本引用
 配置中定义了 `EmbeddedScripts` 类型，用于在 `labeler.json` 内引用脚本。
 当字段类型为 `EmbeddedScripts` 时，取值支持两种形式：
 - 字符串：脚本路径，相对于 `labeler.json`
@@ -146,7 +146,7 @@ your_labeler
 }
 ```
 
-### 标注器定义
+## 标注器定义
 下面详细说明 `labeler.json`。下表简述根对象各字段含义。
 也可以查看带详细注释的Kotlin源码：[LabelerConf.kt](https://github.com/sdercolin/vlabeler/blob/main/src/jvmMain/kotlin/com/sdercolin/vlabeler/model/LabelerConf.kt)
 
@@ -189,7 +189,7 @@ your_labeler
 
 下面解释部分关键字段。
 
-#### 命名与版本管理
+### 命名与版本管理
 一份发布版标注器需要唯一 `name` 和 `version`。每次修改并对外发布时，**版本号必须递增**，同时避免和已有标注器重名。
 
 `vLabeler` 依靠 name+version 自动处理标注器版本匹配：
@@ -198,20 +198,20 @@ your_labeler
 
 > 注意：若标注器使用了外部资源文件，程序**不会自动更新**（资源不会打包进项目文件），需要用户手动升级到同版或更高版本。发布新版标注器时尽量保持向前兼容——vLabeler 不会阻止用户使用旧版标注器打开项目。
 
-#### serialVersion（序列化版本）
+### serialVersion（序列化版本）
 序列化版本用于校验标注器结构和当前应用是否兼容。查阅[标注器结构更新记录](https://github.com/sdercolin/vlabeler/blob/main/docs/labeler-structure-updates.md)获取最新serialVersion并填写。
 
 使用本文档开发新版目录式标注器时，务必设置 `singleFile: false`；该字段用来区分旧式单文件标注器。
 
-#### extension（后缀名）
+### extension（后缀名）
 `extension` 是原始标签文件后缀，用于文件选择器过滤、插件兼容性判断。**不要加前置点**：例如写 `lab`，而非 `.lab`。
 
-#### continuous（连续条目）
+### continuous（连续条目）
 布尔标记，控制条目是否连续（本条end=下一条start）。
 开启后默认启用多条联动编辑。
 该字段会显著改变程序多处行为，请务必配置正确。
 
-#### Field（时序点字段）
+### Field（时序点字段）
 `fields` 定义除内置 `start`、`end` 之外的自定义时序点。
 所有时序点（含内置start/end）都是毫秒浮点数，以采样文件起点为基准。
 每个字段在编辑器渲染为一条可拖拽控制线。
@@ -234,7 +234,7 @@ your_labeler
 | triggerPostEditNext | Boolean | false | 修改此字段是否触发「编辑后跳到下一条」，详见[Post-edit actions](#post-edit-actions) |
 | triggerPostEditDone | Boolean | false | 修改此字段是否触发「编辑后标记完成」，详见[Post-edit actions](#post-edit-actions) |
 
-##### Constraint（约束）
+#### Constraint（约束）
 `constraints` 定义字段大小约束，数组内每条格式：
 ```json
 {
@@ -251,13 +251,13 @@ your_labeler
 
 约束仅**限制拖拽操作**；用户直接输入数值、插件脚本写入时不会校验。强约束需要在属性setter、writer脚本内手动判断并抛出错误。
 
-##### Shortcut（快捷键）
+#### Shortcut（快捷键）
 vLabeler提供快捷键，一键把选中时序点设为当前播放光标位置：默认 `Q W E R ... I O P`。
 `Q` 绑定原生`start`；后续快捷键按`shortcutIndex`顺序分配给自定义Field；`end`占用自定义字段之后的下一个快捷键。
 
 建议按时序线上从左到右的顺序分配`shortcutIndex`。
 
-##### Replace Standard Fields（替换标准起止点）
+#### Replace Standard Fields（替换标准起止点）
 vLabeler默认所有自定义时序点必须落在 `start` ~ `end` 之间。但部分格式（如UTAU）允许overlap落在start左侧。
 
 内置UTAU标注器的做法：新增`left`自定义字段，设置 `replaceStart: true`。
@@ -267,7 +267,7 @@ vLabeler默认所有自定义时序点必须落在 `start` ~ `end` 之间。但�
 > 注意：该特性**仅非连续标注器（continuous=false）**可用。
 > 使用替换字段后，parser、属性读写脚本都必须同时维护替换字段与原生start/end的值。
 
-#### Extra Field（附加字段）
+### Extra Field（附加字段）
 `extraFields` 用于条目层级、**非时序**附加字段；`moduleExtraFields` 用于模块层级附加字段。
 和`fields`不同：附加字段不渲染时序控制线，值只能是字符串或`null`。
 
@@ -289,7 +289,7 @@ vLabeler默认所有自定义时序点必须落在 `start` ~ `end` 之间。但�
 UTAU的cutoff/right支持两种语义：负数=相对采样起点，非负=相对采样终点。
 vLabeler内部统一转为相对采样起点的毫秒值，但导出时需要原始正负信息，因此把原始值存入`rawRight`附加字段。
 
-#### Locked Drag（锁定拖拽/固定联动）
+### Locked Drag（锁定拖拽/固定联动）
 锁定拖拽：拖动一个基准点时，所有时序点保持相对间距同步平移（UTAU oto编辑常用）。
 UI内称为`fixed-drag`。
 
@@ -305,7 +305,7 @@ UI内称为`fixed-drag`。
 - `useStart`：是否把原生start作为基准；若存在`replaceStart=true`字段，则使用该替代字段而非原生start
 - `useDragBase`：是否把标记`dragBase=true`的字段作为基准
 
-#### Point Overflow（越界策略）
+### Point Overflow（越界策略）
 `overflowBeforeStart` / `overflowAfterEnd` 分别控制：出现早于start、晚于end的时间点时如何处理。
 可选值：
 - `Error`：抛出错误，禁止
@@ -314,7 +314,7 @@ UI内称为`fixed-drag`。
 
 默认值：`Error`
 
-#### Post-edit Actions（编辑后自动动作）
+### Post-edit Actions（编辑后自动动作）
 vLabeler内置两种编辑后自动动作：
 - `Go to next entry after editing`：编辑完成后自动切下一条
 - `Mark as done after editing`：编辑完成后标记本条完成
@@ -333,7 +333,7 @@ vLabeler内置两种编辑后自动动作：
 
 自定义时序点则直接在Field内使用 `triggerPostEditNext` / `triggerPostEditDone` 开关。
 
-#### 支持标签文件重载
+### 支持标签文件重载
 用户重载标签文件时，程序比对新旧条目差异。为计算条目相似度，需要在`entrySimilarityWeights`配置各属性权重。
 
 | 键 | 类型 | 默认值 | 说明 |
@@ -349,7 +349,7 @@ vLabeler内置两种编辑后自动动作：
 
 可参考官方内置标注器的权重配置。
 
-#### Property（派生属性）
+### Property（派生属性）
 `fields`时序点、`extraFields`附加字段可以存储原始数据，但UI展示/用户输入经常需要转换后的派生值。
 
 例：UTAU的preutterance是**相对left**的值（用户习惯看到这个），但vLabeler内部统一存为**相对采样起点**的绝对毫秒。这时就需要Property做双向转换：展示时转为相对值、用户输入相对值时回写底层时序点。
@@ -366,7 +366,7 @@ vLabeler内置两种编辑后自动动作：
 
 详见[属性读取器](#属性读取器)、[属性写入器](#属性写入器)。
 
-#### Parser（解析器）
+### Parser（解析器）
 `parser`定义原始标签→条目的逻辑。
 
 | 键 | 类型 | 默认值 | 说明 |
@@ -379,7 +379,7 @@ vLabeler内置两种编辑后自动动作：
 
 详见[解析原始标签](#解析原始标签)。
 
-#### Writer（写入器）
+### Writer（写入器）
 `writer`定义条目→原始标签的逻辑。
 
 | 键 | 类型 | 默认值 | 说明 |
@@ -390,7 +390,7 @@ vLabeler内置两种编辑后自动动作：
 
 `format`和`scripts`二选一；同时存在时优先使用scripts。
 
-##### 使用 format 模板
+#### 使用 format 模板
 `format`是字符串模板，`{变量名}`作为占位符。
 示例：`{sample}:{name}={start},{middle},{end}` 渲染为 `a.wav:a:100,220.5,300`
 
@@ -405,10 +405,10 @@ vLabeler内置两种编辑后自动动作：
 
 > 若Field/ExtraField和Property重名，优先取Property。
 
-##### 使用 scripts 脚本
+#### 使用 scripts 脚本
 详见[写入原始标签](#写入原始标签)。
 
-#### Parameters（用户参数）
+### Parameters（用户参数）
 标注器配置本身不适合让用户直接修改JSON，但很多场景需要开放运行时选项。
 例：UTAU标注器提供开关，控制是否允许负overlap。这类配置在项目创建弹窗展示，部分支持项目编辑时修改。
 
@@ -420,7 +420,7 @@ vLabeler内置两种编辑后自动动作：
 | injector | EmbeddedScripts &#124; null | null | 参数注入脚本，可动态修改labeler配置，详见[注入参数值](#注入参数值) |
 | changeable | Boolean | false | 项目创建后是否允许修改该参数 |
 
-#### Project Constructor（项目构建器）
+### Project Constructor（项目构建器）
 对象仅包含`scripts`字段（EmbeddedScripts），示例：
 ```json
 {
@@ -429,7 +429,7 @@ vLabeler内置两种编辑后自动动作：
 ```
 详见[构建项目](#构建项目)。
 
-#### Quick Project Builder（快速项目构建器）
+### Quick Project Builder（快速项目构建器）
 数组存放快速构建器定义，用于首页「快速编辑」，直接从单个文件/文件夹一键生成项目。
 
 | 键 | 类型 | 默认值 | 说明 |
@@ -442,12 +442,12 @@ vLabeler内置两种编辑后自动动作：
 
 详见[启用快速编辑](#启用快速编辑)。
 
-### 标注器内脚本编写
+## 标注器内脚本编写
 前面介绍了标注器结构，本节讲解脚本写法。
 开始前请先阅读[vLabeler脚本基础](scripting.md)，了解脚本运行环境。
 也可以回看[脚本引用](#脚本引用)，确认配置内如何关联js文件。
 
-#### 构建项目
+### 构建项目
 前面讲过项目结构，这里说明如何用脚本从声库生成项目。
 
 最简场景：单模块、所有条目写在根目录单一标签文件，无需自定义构建脚本。
@@ -471,7 +471,7 @@ your_project
 
 如果需要多模块、多文件夹独立标签文件，就需要在`projectConstructor`内指定脚本。
 
-##### 输入变量
+#### 输入变量
 脚本执行前环境预定义变量：
 
 | 名称 | 类型 | 说明 |
@@ -483,7 +483,7 @@ your_project
 | acceptedSampleExtensions | String[] | vLabeler支持的采样后缀，如`["wav", "mp3"]` |
 | debug | Boolean | 是否调试模式（Gradle run任务） |
 
-##### 输出约定
+#### 输出约定
 脚本执行完成后，全局变量`modules`必须正确赋值，程序据此创建项目。
 `modules`是[ModuleDefinition](https://github.com/sdercolin/vlabeler/blob/main/src/jvmMain/resources/js/module_definition.js)对象数组。
 
@@ -524,7 +524,7 @@ if (modules.length === 0) {
 
 最后建议判断modules是否为空，抛出友好错误提示。
 
-#### 启用快速编辑
+### 启用快速编辑
 快速编辑功能：首页直接选择文件/文件夹，一键生成项目。
 需要在`quickProjectBuilders`定义构建器。
 
@@ -532,24 +532,24 @@ if (modules.length === 0) {
 
 QuickProjectBuilder内`scripts`实现从输入生成项目。
 
-##### 输入变量
+#### 输入变量
 - `input`：[File](https://github.com/sdercolin/vlabeler/blob/main/docs/file-api.md)对象，选中的文件或文件夹
 - `savedParams`：标注器持久化参数，原始值；调试前建议打印确认类型
 
-##### 输出约定
+#### 输出约定
 - `projectFile`：[File](https://github.com/sdercolin/vlabeler/blob/main/docs/file-api.md)，生成的`.lbp`项目文件
 - `sampleDirectory`：[File](https://github.com/sdercolin/vlabeler/blob/main/docs/file-api.md)，采样根目录
 - `cacheDirectory`：[File](https://github.com/sdercolin/vlabeler/blob/main/docs/file-api.md)，缓存目录；不设置则使用默认缓存
 - `encoding`：标签文件编码，默认UTF-8
 - `params`：项目使用的标注器参数；不设置则沿用`savedParams`
 
-#### 属性读取器（Property Getter）
+### 属性读取器（Property Getter）
 Property的`valueGetter`脚本用于获取派生属性值。
 
-##### 输入变量
+#### 输入变量
 - `entry`：当前条目对象 [`entry`](https://github.com/sdercolin/vlabeler/blob/main/src/jvmMain/resources/js/class_entry.js)
 
-##### 输出约定
+#### 输出约定
 **全局变量`value`** 赋值为计算得到的数值。
 > 注意：`let value = ...` / `const value = ...` 不会生效！
 
@@ -558,17 +558,17 @@ Property的`valueGetter`脚本用于获取派生属性值。
 value = entry.end - entry.start
 ```
 
-##### 错误处理
+#### 错误处理
 读取器不预期抛出异常；出错静默返回0并打印日志。
 
-#### 属性写入器（Property Setter）
+### 属性写入器（Property Setter）
 Property的`valueSetter`脚本，用户修改派生属性后回写底层条目。
 
-##### 输入变量
+#### 输入变量
 - `entry`：当前条目对象
 - `value`：用户输入的新数值
 
-##### 输出约定
+#### 输出约定
 直接修改`entry`对象字段，无需额外返回变量。
 
 示例：通过时长修改end
@@ -576,10 +576,10 @@ Property的`valueSetter`脚本，用户修改派生属性后回写底层条目�
 entry.end = entry.start + value
 ```
 
-##### 错误处理
+#### 错误处理
 写入器可使用全局`error()`API抛出校验错误。
 
-#### 解析原始标签
+### 解析原始标签
 项目创建流程简要回顾：
 1. 执行项目构建器生成ModuleDefinition列表
 2. 逐个模块生成条目
@@ -591,7 +591,7 @@ entry.end = entry.start + value
 
 > 小结：Entry域解析器**按模块执行一次**；Modules域解析器**按模块组执行一次**。
 
-##### 公共输入（Entry / Modules 域共用）
+#### 公共输入（Entry / Modules 域共用）
 | 名称 | 类型 | 说明 |
 |------|------|------|
 | inputFileNames | String[] | 输入标签文件名；Entry域仅1个元素 |
@@ -601,7 +601,7 @@ entry.end = entry.start + value
 | encoding | String | 文件编码 |
 | debug | Boolean | 调试标记 |
 
-##### Entry域解析
+#### Entry域解析
 Entry域配合`extractionPattern`正则、`variableNames`提取每行变量：程序逐行读入，正则捕获变量后再执行脚本。
 
 除公共变量外，额外传入：
@@ -621,7 +621,7 @@ parts = input.split(",")
 entry = new Entry(parts[0], parts[1], parseFloat(parts[2]), parseFloat(parts[3]), [], [])
 ```
 
-##### Modules域解析
+#### Modules域解析
 Modules域按模块组执行。先判断组内inputFiles是否存在；无文件则 fallback：按defaultValues为每个采样生成默认条目。
 
 存在有效输入文件时，脚本环境额外传入：
@@ -632,23 +632,23 @@ Modules域按模块组执行。先判断组内inputFiles是否存在；无文件
 全局变量`modules` = `Entry[][]`，外层数组顺序和`moduleDefinitions`一一对应，内层是每个模块的条目列表。
 可选：全局变量`moduleExtras` = `Dictionary[]`，顺序和modules对齐；字典key对应moduleExtraFields名称；值为字符串，null值不要写入key。
 
-#### 写入原始标签
+### 写入原始标签
 Writer支持Entry域、Modules域；简单场景用`format`模板，复杂逻辑用`scripts`。
 
-##### 公共输入（Entry / Modules 域共用）
+#### 公共输入（Entry / Modules 域共用）
 | 名称 | 类型 | 说明 |
 |------|------|------|
 | params | Dictionary | 标注器参数 |
 | resources | String[] | 资源文本数组 |
 | debug | Boolean | 调试标记 |
 
-##### Entry域写入
+#### Entry域写入
 Entry域每条目执行一次脚本。可用变量同[format模板](#使用-format-模板)。
 
 **全局变量`output`** 赋值为单行输出文本。
 > 注意：`let output = ...` / `const output = ...` 无效！
 
-##### Modules域写入
+#### Modules域写入
 整组模块一次性执行写入脚本。额外传入变量：
 - `moduleNames`：本组模块名数组
 - `modules`：`Entry[][]`，条目二维数组，顺序和moduleNames对齐
@@ -656,7 +656,7 @@ Entry域每条目执行一次脚本。可用变量同[format模板](#使用-form
 
 **全局变量`output`** 赋值为完整标签文件文本，程序写入该模块组对应的`labelFilePath`。
 
-#### 注入参数值（Injector）
+### 注入参数值（Injector）
 标注器json本身一般不允许用户直接修改，但参数注入器可以**根据用户参数动态修改labeler配置对象**。
 典型场景：UTAU的`useNegativeOvl`开关，动态修改ovl字段约束。
 
@@ -690,19 +690,19 @@ labeler.fields[2].constraints[0].min = value ? null : 3
 > - `extraFields`内每个元素的`name`
 > - `properties`内每个元素的`name`
 
-### 其他说明
-#### 示例项目
+## 其他说明
+### 示例项目
 所有官方标注器开源，可直接参考：
 - [UTAU singer labeler](https://github.com/sdercolin/vlabeler/blob/main/resources/common/labelers/utau-singer-labeler)：多音高UTAU声库，覆盖绝大多数脚本能力
 - [NNSVS singer labeler](https://github.com/sdercolin/vlabeler/blob/main/resources/common/labelers/nnsvs-singer-labeler)：NNSVS声库，演示声库结构和vLabeler项目结构不同时的适配方案
 - [Textgrid labeler](https://github.com/sdercolin/vlabeler-textgrid)：Praat TextGrid标注器，使用模块组+Modules域解析/写入
 
-#### 本地化
+### 本地化
 查看[本地化字符串规范](https://github.com/sdercolin/vlabeler/blob/main/docs/localized-string.md)，了解文档中 `String (Localized)` 类型。
 
-#### 错误处理
+### 错误处理
 脚本异常策略详见[vLabeler脚本基础](https://github.com/sdercolin/vlabeler/blob/main/docs/scripting.md#error-handling)。
 
-#### 调试
+### 调试
 使用`console.log()`打印日志：标准输出写入`.logs/info.log`，错误输出写入`.logs/error.log`。
 如果标注器不在下拉列表，大概率加载阶段JSON解析/脚本报错，优先查看错误日志。
