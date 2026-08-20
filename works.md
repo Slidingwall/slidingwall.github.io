@@ -24,6 +24,14 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-works
+header:
+  theme: dark
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    src: /assets/images/banners/home.webp
 ---
 
 ### 歌声合成相关
