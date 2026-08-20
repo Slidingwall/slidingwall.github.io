@@ -530,13 +530,14 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 - [DDB Tools GUI](https://github.com/ayatinene/ddb-tools)（来自 UselessBug 和 Yuukawa Hiroshi）（一种更简便的声库打包方式。）
   > *译注：译者用[Rust重写了GUI版](https://github.com/Slidingwall/ddb-toolbox-rs)，同时还加入了之前GUI不能执行的脚本。欢迎试用~~顺便帮忙检查哪里有BUG~~*
 - [Vocaloid 自定义语言 G2PA 表格](https://docs.google.com/spreadsheets/d/1Lr2VMc1g346xYltbI3fbal7m76TCVBlDAn-YZKLylTM/edit?gid=0)（来自 ZouZouPowa）
-- ~~[Vocaloid 自定义语言 G2PA 基础文件](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（来自 Yanwu Project）~~
-  > *译注：链接失效*
 - [Phn_Seg_edit](https://files.catbox.moe/orxb7r.rar)（来自 H5X2） **Phn_Seg.py** 的一个分支；生成类似 moresampler 的基础文件。您需要 wav 文件和转录文件。
   > *译注：[搬运链接](/assets/files/orxb7r.rar)*
 - [Lab to seg](https://drive.google.com/file/d/1Q1rUyF08BVCmDxuYPKkSut5CBX_OIx1J/view)（来自 Rozea/Kori）
   > *译注：[搬运链接](/assets/files/lab2seg.7z)*
 - [Melodyne](https://drive.google.com/file/d/1Ga566Es8hLinnDZxbxVMTOwuLzwzVdIT/view?usp=drivesdk)  用于编辑或校正采样音高（如有需要）。
+
+**以下内容已失效：**
+- ~~[Vocaloid 自定义语言 G2PA 基础文件](https://www.mediafire.com/file/fejtjae5h984e3c/Dictionary_base.zip/file)（来自 Yanwu Project）~~
 
 ### 旧版文档中的资源
 - [VocaloidDBTool3](https://archive.org/details/vocaloid3-developer-kit)
@@ -553,7 +554,7 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
   > *译注：[搬运链接](/assets/files/V3_list.xlsx)*
 - [日语CVVC录音表+转录文件](https://github.com/InochiPM/Vocaloid-Reclist/releases/tag/Reclist-1.2)*(From Inochi-P)*
 
-以下内容已失效：
+**以下内容已失效：**
 - ~~[ViVi + VocaDev](https://archive.org/details/vivi-jpn-final)（无需保留Vivi）~~
   > *译注：此资源可在vocakey中找到 但已不再需要*
 - ~~[Vocaloid 4 FE Plus](https://elrincondelkitsuneneo2-0.blogspot.com/2021/11/vocaloid-451-editor-version-alpha.html)（包含一个无需安装即可注册声库的软件，但声库仅在Vocaloid 4 FE Plus中显示）~~
@@ -566,7 +567,7 @@ python mixins_ddb.py --src_path "[声库 .ddi 文件路径]" --mixins_path "[您
 - ~~[基于单词的英语录音表](https://www.mediafire.com/file/9z0cch1acqcad1a/Word_Based_English.zip/file)*(From Canned Bread/luciozundiezz)* 像UTAU那样录制，每个音阶对应一个音拍。（参考GUMI的录音表决定要复制哪些样本）虽不完美，但这是一个很好的基础。采样需要复制粘贴。~~ 
 - ~~[基于单词的西班牙语录音表PDF](https://www.mediafire.com/file/5pwt3cldp7baen1/Spanish+Reclist+-+Public+Research+Paper.pdf/file)*(From AnotherNN)* 虽不完美，但已精简。~~
 - ~~[Vocaloid2Keygen](https://www.mediafire.com/file/9fo8mlep70m44xz/keygen.rar/file)~~
-  > *译注：链接失效，需要找序列号生成逻辑请参见[VVD](/VVD/help.html)*
+  > *译注：需要找序列号生成逻辑请参见[VVD](/VVD/help.html)*
 - ~~[字典](https://www.mediafire.com/file/37q20qdvhrncibo/Dictionary_Collection.zip/file)*(From daigasso)*~~
 - ~~[Takeo V2(示例CVVC声库+开发文件)](https://www.mediafire.com/file/fgsm4nrncw1av9a/TAKEO_V2.zip/file) （支持咆哮声，已更新为更响亮、更清晰的采样）提供以便于学习并解答关于应该做什么和不应该做什么的疑问。遵循`readme`文件即可尽情地分析它！进行各种实验，尽情发挥，把它作为开发您自己的录音列表或声库的基础。~~
 - ~~Takeo V4 HARD(示例VCV/CVVC[声库](https://www.mediafire.com/file/1xshvtghv7u15he/TK_HARD_V4_VB.zip/file)+[开发文件](https://www.mediafire.com/file/id6fefspopincfq/TK_HARD_V4_DEV.zip/file))规则同V2声库，您可以交叉合成两个声库。~~  
