@@ -37,7 +37,7 @@ article_header:
 ---
 <style>
 .article__header--overlay .overlay {
-  min-height: 240px !important;
+  min-height: 180px !important;
 }
 .page__header .header__brand path {
   fill: rgba(255, 255, 255, .95) !important;
