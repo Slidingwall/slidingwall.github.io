@@ -34,9 +34,7 @@ article_header:
     gradient: 'rgba(32, 48, 40,0.65)'
     src: /assets/images/banners/home.webp
 ---
-
-## 关于
-
+# 关于
 
 才疏学浅的咸鱼，痛苦读研中。
 
