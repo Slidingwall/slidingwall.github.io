@@ -32,12 +32,15 @@ article_header:
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: rgba(32, 48, 40, 0.65)
     src: /assets/images/banners/home.webp
 ---
 <style>
+.article-header__gradient {
+  background: rgba(32, 48, 40, 0.65) !important;
+  background-image: none !important;
+}
 body.custom-banner-height .article-header--overlay {
-  min-height: 420px !important;
+  min-height: 300px !important;
 }
 </style>
 # 关于
