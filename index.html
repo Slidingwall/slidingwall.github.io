@@ -27,7 +27,7 @@ articles:
   position: relative;
   width: 100%;
 }
-.article__header h1::after {
+.article__header h1::before {
   content: "滑墙 | Slidingwall";
   visibility: visible;
   position: absolute;
@@ -36,23 +36,22 @@ articles:
   width: 100%;
   white-space: nowrap;
 }
+.article__header h1::after {
+  content: "记录无聊的咸鱼生活.";
+  visibility: visible;
+  position: absolute;
+  top: 1.8em;
+  left: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.85);
+}
 .article__header--overlay .overlay {
   min-height: 180px !important;
 }
 .page__header .header__brand path {
   fill: rgba(255, 255, 255, .95) !important;
-}
-.article__header--overlay .overlay__excerpt {
-  visibility: hidden;
-  position: relative;
-  width: 100%;
-}
-.article__header--overlay .overlay__excerpt::before {
-  content: "记录无聊的咸鱼生活.";
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 </style>
