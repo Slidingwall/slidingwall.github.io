@@ -35,11 +35,11 @@ article_header:
     src: /assets/images/banners/home.webp
 ---
 <style>
-.article-header__gradient {
+.page__main--immersive .article-header__gradient {
   background: rgba(32, 48, 40, 0.65) !important;
   background-image: none !important;
 }
-body.custom-banner-height .article-header--overlay {
+.page__main--immersive .article-header--overlay {
   min-height: 300px !important;
 }
 </style>
