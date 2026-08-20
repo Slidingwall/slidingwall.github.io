@@ -25,6 +25,7 @@ articles:
 .article__header h1 {
   visibility: hidden;
   position: relative;
+  width: 100%;
 }
 .article__header h1::after {
   content: "滑墙 | Slidingwall";
@@ -32,7 +33,8 @@ articles:
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  white-space: nowrap;
 }
 .article__header--overlay .overlay {
   min-height: 180px !important;
@@ -43,6 +45,7 @@ articles:
 .article__header--overlay .overlay__excerpt {
   visibility: hidden;
   position: relative;
+  width: 100%;
 }
 .article__header--overlay .overlay__excerpt::before {
   content: "记录无聊的咸鱼生活.";
@@ -50,6 +53,6 @@ articles:
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
 }
 </style>
