@@ -2,7 +2,7 @@
 title: 【自用中译】开发自定义vlabeler标注器
 date: 2026-08-17 06:44
 category: 歌声合成
-author: 
+author: vlabler
 tags: [vlabeler, 歌声合成, 翻译]
 summary: 
 ---
