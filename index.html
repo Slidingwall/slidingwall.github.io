@@ -23,15 +23,33 @@ articles:
 
 <style>
 .article__header h1 {
-  content: "滑墙 | Slidingwall";
+  visibility: hidden;
+  position: relative;
 }
-.article__header--overlay .overlay__excerpt {
-  content: "记录无聊的咸鱼生活.";
+.article__header h1::before {
+  content: "滑墙 | Slidingwall";
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .article__header--overlay .overlay {
   min-height: 180px !important;
 }
 .page__header .header__brand path {
   fill: rgba(255, 255, 255, .95) !important;
+}
+.article__header--overlay .overlay__excerpt {
+  visibility: hidden;
+  position: relative;
+}
+.article__header--overlay .overlay__excerpt::before {
+  content: "记录无聊的咸鱼生活.";
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 </style>
