@@ -32,9 +32,14 @@ article_header:
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: 'rgba(32, 48, 40,0.65)'
+    gradient: rgba(32, 48, 40, 0.65)
     src: /assets/images/banners/home.webp
 ---
+<style>
+body.custom-banner-height .article-header--overlay {
+  min-height: 420px !important;
+}
+</style>
 # 关于
 
 才疏学浅的咸鱼，痛苦读研中。
