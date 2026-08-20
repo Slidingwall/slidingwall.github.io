@@ -11,6 +11,8 @@ article_header:
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
     src: /assets/images/banners/home.webp
+  actions:
+    - '<div class="banner-title">滑墙 | Slidingwall</div><div class="banner-desc">记录无聊的咸鱼生活.</div>'
 articles:
   show_cover: true
   cover_size: lg
@@ -19,15 +21,27 @@ articles:
   show_readmore: true
   show_info: true
 ---
-<div class="banner-title">滑墙 | Slidingwall</div>
-<div class="banner-desc">记录无聊的咸鱼生活.</div>
 <!--more-->
 
 <style>
+body .article-header__title {
+  display: none !important;
+}
 .article__header--overlay .overlay {
   min-height: 180px !important;
 }
 .page__header .header__brand path {
   fill: rgba(255, 255, 255, .95) !important;
+}
+.banner-title {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.banner-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
 }
 </style>
