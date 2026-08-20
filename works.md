@@ -32,12 +32,11 @@ article_header:
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: linear-gradient(rgba(32, 48, 40, .65),rgba(32, 48, 40, .65))
+    gradient: linear-gradient(rgba(32, 48, 40, .5),rgba(32, 48, 40, .5))
     src: /assets/images/banners/home.webp
 ---
 <style>
-.article-header--overlay {
-  position: relative !important;
+.article__header--overlay .overlay {
   min-height: 300px !important;
 }
 .page__header .header__brand path {
