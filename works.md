@@ -32,7 +32,7 @@ article_header:
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: linear-gradient(rgba(32, 48, 40, .5),rgba(32, 48, 40, .5))
+    gradient: linear-gradient(rgba(32, 48, 40, .35),rgba(32, 48, 40, .35))
     src: /assets/images/banners/home.webp
 ---
 <style>
